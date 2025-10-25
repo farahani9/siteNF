@@ -1,41 +1,32 @@
+@font-face {
+    font-family: 'IranSans' ;
+    src: url(IRANSansX-VF.ttf)format(truetype);
+}
 body {
-  background-color: lightblue;
-}
-
-body {
-  font-family: "Sofia", sans-serif;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-}
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-}
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
+    font-family: 'IranSans';
+    direction: rtl;
+    margin: 0;
+    padding: 0;
 
 }
+.navbar-custom {
+    background-color: #FADADD; 
+}
 
-a:hover, a:active {
-  background-color: red;
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand,
+.navbar-custom .btn {
+    color: black;
 }
-p {
-  font-family: verdana;
-  font-size: 20px;
-  text-align: center;
+.navbar-custom .btn:hover  {
+    color: #dd2a47;
 }
-#myid {
-  text-align: center;
-  color: red;
+.navbar-custom .btn-outline-light {
+    border-color: black;
+    color: black;
+}
+.navbar-custom .btn-outline-light:hover {
+    background-color: #dd2a47;
+    border-color: #dd2a47;
+    color: white;
 }
