@@ -1,160 +1,301 @@
+/* ===================== فونت‌ها ===================== */
 @font-face {
     font-family: 'IranSansM';
-    src: url(IRANSansX-Medium.woff)format(woff);
+    src: url('IRANSansX-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'IranSansB';
+    src: url('IRANSansX-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
-  direction: rtl;
-  font-family: 'IranSansM';
-  padding: 0;
-  margin: 0;
+    direction: rtl;
+    font-family: 'IranSansM';
+    padding: 0;
+    margin: 0;
 }
 
-/* 🎨 رنگ منو */
+/* ===================== منو ===================== */
+/* --------------------- منو --------------------- */
 .navbar-custom {
-  background-color: #FADADD; /* صورتی کمرنگ */
+    background-color: #FADADD; /* صورتی کمرنگ */
 }
+
 .navbar-custom .nav-link {
-  color: black; /* رنگ پیش‌فرض لینک‌ها */
-  transition: 0.3s;
+    color: black; /* رنگ پیش‌فرض لینک‌ها */
+    transition: 0.3s;
 }
 
 .navbar-custom .nav-link:hover {
-  color: #dd2a47; /* رنگ هنگام هاور */
-}
-
-/* دکمه‌ها */
-.navbar-custom .btn-outline-light {
-  border-color: black;
-  color: black;
-  transition: 0.3s;
-}
-.navbar-custom .btn-outline-light:hover {
-  background-color: #dd2a47; /* صورتی پررنگ */
-  border-color: #dd2a47;
-  color: white;
-}
-
-/* 🔍 استایل باکس سرچ */
-.search-box {
-  background-color: transparent;
-  border: 1px solid black;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  width: 500px;
-  font-weight: bold;
-}
-
-/* فیلد ورودی */
-.search-box input {
-  background: transparent;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  color: #333;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-/* آیکون کنار سرچ */
-.search-box .input-group-text {
-  background: transparent;
-  border: none;
-  padding: 0 10px;
-  transition: 0.3s;
-}
-
-.search-icon-img {
-  width: 22px;
-  height: 22px;
-  transition: 0.3s;
-}
-
-/* 🌸 وقتی روی سرچ کلیک می‌شود */
-.search-box:focus-within {
-  background-color: #dd2a47;              /* پس‌زمینه صورتی پررنگ */
-  box-shadow: 0 0 8px rgba(221, 42, 71, 0.7); /* سایه صورتی پررنگ */
-  border-color: #dd2a47;                 /* بردر هم‌ رنگ */             /* کمی بزرگ‌تر شود */
-}
-
-/* فیلد ورودی در حالت فوکوس */
-.search-box:focus-within input {
-  background-color: #dd2a47 !important;  /* هم‌رنگ با باکس اصلی */
-  color: white;                          /* متن سفید */
-}
-
-/* placeholder سفید */
-.search-box:focus-within input::placeholder {
-  color: #ffffff;
-}
-
-/* آیکون وقتی روی سرچ هستیم */
-.search-box:focus-within .search-icon-img {
-  content: url('search-white.svg'); /* تصویر آیکون سفید */
-}
-/* دکمه آیکون */
-.btn-icon {
-  background-color: transparent;
-  border: none;
-  padding: 5px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-/* آیکون پیش‌فرض */
-.btn-icon .icon-img {
-  width: 27px;
-  height: 27px;
-  transition: 0.3s;
-}
-
-/* وقتی روی دکمه هاور شد */
-.btn-icon:hover .icon-img {
-  content: url('user-pink.svg'); /* تصویر آیکون تغییر می‌کند */
-  cursor: Hand;
-}
-/* دکمه سبد خرید */
-.btn-cart {
-  background-color: transparent;
-  border: none;
-  padding: 5px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-/* آیکون پیش‌فرض سبد خرید */
-.btn-cart .icon-img {
-  width: 27px;
-  height: 27px;
-  transition: 0.3s;
-}
-
-/* وقتی روی دکمه هاور شد */
-.btn-cart:hover .icon-img {
-  content: url('trolley-pink.svg'); /* تصویر آیکون تغییر می‌کند */
-  cursor: pointer;
-}
-/* لینک‌های منو */
-.navbar-custom .nav-link {
-  color: black;
-  transition: 0.3s;
-}
-
-/* هاور لینک‌های اصلی */
-.navbar-custom .nav-link:hover {
-  color: #dd2a47 ;
+    color: #dd2a47; /* رنگ هنگام هاور */
 }
 
 /* آیتم‌های دراپ‌داون */
 .navbar-custom .dropdown-item {
-  color: black;
-  transition: 0.3s;
+    color: black;
+    transition: 0.3s;
 }
 
-/* هاور روی آیتم‌های زیرمنو */
 .navbar-custom .dropdown-item:hover {
-  color: #dd2a47 ;
+    color: #dd2a47;
 }
-/* منوو تمامممم */
+
+/* --------------------- دکمه‌ها --------------------- */
+/* دکمه‌های بوت‌استرپ (Outline) */
+.navbar-custom .btn-outline-light {
+    border-color: black;
+    color: black;
+    transition: 0.3s;
+}
+
+.navbar-custom .btn-outline-light:hover {
+    background-color: #dd2a47; /* صورتی پررنگ */
+    border-color: #dd2a47;
+    color: white;
+}
+
+/* دکمه آیکون کاربر */
+.btn-icon {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-icon .icon-img {
+    width: 27px;
+    height: 27px;
+    transition: 0.3s;
+}
+
+.btn-icon:hover .icon-img {
+    content: url('user-pink.svg'); /* تصویر آیکون تغییر می‌کند */
+    cursor: pointer;
+}
+
+/* دکمه سبد خرید */
+.btn-cart {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-cart .icon-img {
+    width: 27px;
+    height: 27px;
+    transition: 0.3s;
+}
+
+.btn-cart:hover .icon-img {
+    content: url('trolley-pink.svg'); /* تصویر آیکون تغییر می‌کند */
+    cursor: pointer;
+}
+
+/* --------------------- باکس سرچ --------------------- */
+.search-box {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 500px;
+    font-weight: bold;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: #333;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-box .input-group-text {
+    background: transparent;
+    border: none;
+    padding: 0 10px;
+    transition: 0.3s;
+}
+
+.search-icon-img {
+    width: 22px;
+    height: 22px;
+    transition: 0.3s;
+}
+
+/* وقتی روی سرچ فوکوس است */
+.search-box:focus-within {
+    background-color: #dd2a47;
+    box-shadow: 0 0 8px rgba(221, 42, 71, 0.7);
+    border-color: #dd2a47;
+}
+
+.search-box:focus-within input {
+    background-color: #dd2a47 !important;
+    color: white;
+}
+
+.search-box:focus-within input::placeholder {
+    color: #ffffff;
+}
+
+.search-box:focus-within .search-icon-img {
+    content: url('search-white.svg'); /* تصویر آیکون سفید */
+}
+/* ===================== بخش تماس ===================== */
+.contact-info-section {
+    background-color: #ccd8b7; /* سبز کمی کمرنگ */
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 550px;
+    margin: 2rem auto;
+}
+
+.contact-info-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    font-size: 1.5rem;
+    font-family: 'IransansB';
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #879472;
+}
+
+.contact-social {
+    display: flex;
+    flex-direction: column; /* متن بالا، لینک‌ها پایین */
+    gap: 0.5rem;
+}
+
+.contact-social .social-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.social-links a i {
+    font-size: 2rem;
+    color: #879472;
+    transition: 0.3s;
+}
+
+.social-links a i:hover {
+    color: #dd2a47;
+}
+
+/* ===================== فرم نظرات ===================== */
+.contact-form-section {
+    background-color: #ccd8b7; /* سبز کمی کمرنگ‌تر */
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 550px;
+    margin: 2rem auto;
+}
+
+.form-title {
+    font-family: 'IranSansB';
+    color: #000000;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.profile-figure {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 1rem;
+    border: 3px solid #000000;
+    background-image: url('img/avatar-women.svg');
+}
+
+.contact-form .form-control,
+.contact-form textarea {
+    color: #000;
+}
+
+.contact-form .form-control::placeholder,
+.contact-form textarea::placeholder {
+    color: #879472;
+}
+
+.btn-submit {
+    background-color: #dd2a47;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #b21f38;
+}
 
 
 
+
+
+/* ===================== رادیو باتن ===================== */
+.form-check-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #dd2a47;
+    background-color: transparent;
+    position: relative;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+
+.form-check-input:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #dd2a47;
+}
+
+.form-check-input:hover {
+    border-color: #dd2a47;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
