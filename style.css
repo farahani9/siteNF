@@ -21,7 +21,6 @@ body {
 }
 
 /* ===================== منو ===================== */
-/* --------------------- منو --------------------- */
 .navbar-custom {
     background-color: #FADADD; /* صورتی کمرنگ */
 }
@@ -155,9 +154,9 @@ body {
 .contact-info-section {
     background-color: #ccd8b7; /* سبز کمی کمرنگ */
     border-radius: 15px;
-    padding: 2rem;
+    padding: 1.5rem;
     max-width: 550px;
-    margin: 2rem auto;
+    margin: 2rem auto 1rem auto;
 }
 
 .contact-info-title {
@@ -207,6 +206,11 @@ body {
 
 .social-links a i:hover {
     color: #dd2a47;
+}
+/* =====================  مپ ===================== */
+.mapTitle {
+    font-family: 'IranSansB';
+    font-size: 1.5rem;
 }
 
 /* ===================== فرم نظرات ===================== */
