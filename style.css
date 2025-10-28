@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'IranSansM';
+    src: url(IRANSansX-Medium.woff)format(woff);
+}
+body {
+  direction: rtl;
+  font-family: 'IranSansM';
+  padding: 0;
+  margin: 0;
+}
+
+/* 🎨 رنگ منو */
+.navbar-custom {
+  background-color: #FADADD; /* صورتی کمرنگ */
+}
+.navbar-custom .nav-link {
+  color: black; /* رنگ پیش‌فرض لینک‌ها */
+  transition: 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #dd2a47; /* رنگ هنگام هاور */
+}
+
+/* دکمه‌ها */
+.navbar-custom .btn-outline-light {
+  border-color: black;
+  color: black;
+  transition: 0.3s;
+}
+.navbar-custom .btn-outline-light:hover {
+  background-color: #dd2a47; /* صورتی پررنگ */
+  border-color: #dd2a47;
+  color: white;
+}
+
+/* 🔍 استایل باکس سرچ */
+.search-box {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 500px;
+  font-weight: bold;
+}
+
+/* فیلد ورودی */
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* آیکون کنار سرچ */
+.search-box .input-group-text {
+  background: transparent;
+  border: none;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+
+.search-icon-img {
+  width: 22px;
+  height: 22px;
+  transition: 0.3s;
+}
+
+/* 🌸 وقتی روی سرچ کلیک می‌شود */
+.search-box:focus-within {
+  background-color: #dd2a47;              /* پس‌زمینه صورتی پررنگ */
+  box-shadow: 0 0 8px rgba(221, 42, 71, 0.7); /* سایه صورتی پررنگ */
+  border-color: #dd2a47;                 /* بردر هم‌ رنگ */             /* کمی بزرگ‌تر شود */
+}
+
+/* فیلد ورودی در حالت فوکوس */
+.search-box:focus-within input {
+  background-color: #dd2a47 !important;  /* هم‌رنگ با باکس اصلی */
+  color: white;                          /* متن سفید */
+}
+
+/* placeholder سفید */
+.search-box:focus-within input::placeholder {
+  color: #ffffff;
+}
+
+/* آیکون وقتی روی سرچ هستیم */
+.search-box:focus-within .search-icon-img {
+  content: url('search-white.svg'); /* تصویر آیکون سفید */
+}
+/* دکمه آیکون */
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* آیکون پیش‌فرض */
+.btn-icon .icon-img {
+  width: 27px;
+  height: 27px;
+  transition: 0.3s;
+}
+
+/* وقتی روی دکمه هاور شد */
+.btn-icon:hover .icon-img {
+  content: url('user-pink.svg'); /* تصویر آیکون تغییر می‌کند */
+  cursor: Hand;
+}
+/* دکمه سبد خرید */
+.btn-cart {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* آیکون پیش‌فرض سبد خرید */
+.btn-cart .icon-img {
+  width: 27px;
+  height: 27px;
+  transition: 0.3s;
+}
+
+/* وقتی روی دکمه هاور شد */
+.btn-cart:hover .icon-img {
+  content: url('trolley-pink.svg'); /* تصویر آیکون تغییر می‌کند */
+  cursor: pointer;
+}
+/* لینک‌های منو */
+.navbar-custom .nav-link {
+  color: black;
+  transition: 0.3s;
+}
+
+/* هاور لینک‌های اصلی */
+.navbar-custom .nav-link:hover {
+  color: #dd2a47 ;
+}
+
+/* آیتم‌های دراپ‌داون */
+.navbar-custom .dropdown-item {
+  color: black;
+  transition: 0.3s;
+}
+
+/* هاور روی آیتم‌های زیرمنو */
+.navbar-custom .dropdown-item:hover {
+  color: #dd2a47 ;
+}
+/* منوو تمامممم */
+
+
+
