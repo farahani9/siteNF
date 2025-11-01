@@ -303,3 +303,18 @@ body {
 .form-check-label {
     cursor: pointer;
 }
+/* =====================  استایل جدول ===================== */
+
+.service-card {
+  border: 2px solid #A3B18A;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(163, 177, 138, 0.2);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+
