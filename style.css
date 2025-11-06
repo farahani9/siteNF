@@ -1,41 +1,531 @@
-body {
-  background-color: lightblue;
+/* ===================== فونت‌ها ===================== */
+@font-face {
+  font-family: 'IranSansM';
+  src: url('IRANSansX-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
 }
 
-body {
-  font-family: "Sofia", sans-serif;
+@font-face {
+  font-family: 'IranSansB';
+  src: url('IRANSansX-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 
-h1 {
+/* ===================== تنظیمات پایه ===================== */
+body {
+  direction: rtl;
+  font-family: 'IranSansM';
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* ===================== منو ===================== */
+.navbar-custom {
+  background-color: #FADADD; /* صورتی کمرنگ */
+}
+
+.navbar-custom .nav-link {
+  color: black;
+  transition: 0.3s;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #dd2a47;
+}
+
+.navbar-custom .dropdown-item {
+  color: black;
+  transition: 0.3s;
+}
+
+.navbar-custom .dropdown-item:hover {
+  color: #dd2a47;
+}
+
+/* ===================== دکمه‌ها ===================== */
+.navbar-custom .btn-outline-light {
+  border-color: black;
+  color: black;
+  transition: 0.3s;
+}
+
+.navbar-custom .btn-outline-light:hover {
+  background-color: #dd2a47;
+  border-color: #dd2a47;
   color: white;
+}
+
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-icon .icon-img {
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.btn-icon:hover .icon-img {
+  content: url('user-pink.svg');
+}
+
+.btn-cart {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-cart .icon-img {
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.btn-cart:hover .icon-img {
+  content: url('trolley-pink.svg');
+}
+
+/* ===================== باکس سرچ ===================== */
+.search-box {
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 500px;
+  font-weight: bold;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #333;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-box .input-group-text {
+  background: transparent;
+  border: none;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+
+.search-icon-img {
+  width: 22px;
+  height: 22px;
+  transition: 0.3s;
+}
+
+.search-box:focus-within {
+  background-color: #dd2a47;
+  box-shadow: 0 0 8px rgba(221, 42, 71, 0.7);
+  border-color: #dd2a47;
+}
+
+.search-box:focus-within input {
+  background-color: #dd2a47 !important;
+  color: white;
+}
+
+.search-box:focus-within input::placeholder {
+  color: #ffffff;
+}
+
+.search-box:focus-within .search-icon-img {
+  content: url('search-white.svg');
+}
+
+/* ===================== بخش تماس ===================== */
+.contact-info-section {
+  background-color: #ccd8b7;
+  border-radius: 15px;
+  padding: 1.5rem;
+  max-width: 650px;
+  margin: 2rem auto 1rem auto;
+}
+
+.contact-info-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #000;
+  font-size: 1.5rem;
+  font-family: 'IranSansB';
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #000;
+  font-size: 1rem;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #879472;
+}
+
+.contact-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-social .social-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-links a i {
+  font-size: 2rem;
+  color: #879472;
+  transition: 0.3s;
+}
+
+.social-links a i:hover {
+  color: #dd2a47;
+}
+
+/* ===================== نقشه ===================== */
+.mapTitle {
+  font-family: 'IranSansB';
+  font-size: 1.5rem;
+}
+
+/* ===================== فرم نظرات ===================== */
+.contact-form-section {
+  background-color: #ccd8b7;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 650px;
+  margin: 2rem auto;
+}
+
+.form-title {
+  font-family: 'IranSansB';
+  color: #000;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-figure {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 1rem;
+  border: 3px solid #000;
+  background-image: url('img/avatar-women.svg');
+}
+
+.contact-form .form-control,
+.contact-form textarea {
+  color: #000;
+}
+
+.contact-form .form-control::placeholder,
+.contact-form textarea::placeholder {
+  color: #879472;
+}
+
+.btn-submit {
+  background-color: #dd2a47;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  transition: 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #b21f38;
+}
+
+/* ===================== رادیو باتن ===================== */
+.form-check-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #dd2a47;
+  background-color: transparent;
+  position: relative;
+  margin-top: 0.25rem;
+  cursor: pointer;
+}
+
+.form-check-input:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #dd2a47;
+}
+
+.form-check-input:hover {
+  border-color: #dd2a47;
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+/* ===================== صفحه بلاگ تکی ===================== */
+.blog-container {
+  margin-top: 3rem;
+}
+
+.blog-content {
+  background-color: #E6D5B8;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: right;
+}
+
+.blog-content h1 { font-size: 1.75rem; }
+.blog-content h2 { font-size: 1.5rem; }
+.blog-content h3 { font-size: 1rem; }
+
+.blog-img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar {
+  background-color: #ccd8b7;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.sidebar ul li {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #FADADD;
+}
+
+/* ===================== بلاگ چندتایی ===================== */
+.blog-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #E6D5B8;
+  box-shadow: 0 4px 15px rgba(216, 216, 216, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(163, 177, 138, 0.6);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #797979, rgba(230, 213, 184, 0));
+}
+
+.blog-title {
+  position: absolute;
+  bottom: 55px;
+  right: 15px;
+  left: 15px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.glass-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #dd2a47;
+  backdrop-filter: blur(6px);
+  border: none;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(163, 177, 138, 0.4);
+}
+
+.glass-btn:hover {
+  background: #dd2a47;
+  box-shadow: 0 4px 12px #dd2a47;
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* ===================== درباره ما ===================== */
+.about-section {
+  background-color: #E6D5B8;
+  border-radius: 15px;
+}
+
+.about-section img {
+  border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  font-weight: bold;
+}
+
+/* ===================== چرا سترا ===================== */
+.why-setra {
+  background-color: #ccd8b7;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+}
+
+.why-setra h2 {
+  font-weight: bold;
   text-align: center;
 }
-img {
-  display: block;
+
+/* کارت‌های خدمات */
+.service-card {
+  border: none;
+  border-radius: 15px;
+  width: 160px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.service-card h6 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.about-section, .why-setra {
+  max-width: 1000px; /* محدود کردن عرض برای وسط چین */
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
-}
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 25px;
   text-align: center;
+}
+
+.about-section p {
+  text-align: justify; /* متن درباره ما */
+}
+
+.why-setra .carousel-inner {
+  margin-top: 20px;
+}
+
+.service-card {
+  margin: 0 auto;
+}
+
+/* ===================== کنترل‌های اسلایدر ===================== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(50%) sepia(30%) saturate(200%) hue-rotate(40deg);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+/* ===================== فوتر ===================== */
+footer,
+.footer-section {
+  color: #000;
+  padding: 2rem 0;
+}
+
+.footer-section {
+  background-color: #b21f38;
+}
+
+footer a {
   text-decoration: none;
-  display: inline-block;
 }
 
+footer a:hover {
+  text-decoration: none;
 }
 
-a:hover, a:active {
-  background-color: red;
+footer hr {
+  border-color: rgba(255, 255, 255, 0.479);
 }
-p {
-  font-family: verdana;
-  font-size: 20px;
-  text-align: center;
-}
-#myid {
-  text-align: center;
-  color: red;
+
+.small {
+  font-size: 0.9rem;
 }
