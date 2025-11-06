@@ -19,11 +19,12 @@ body {
   font-family: 'IranSansM';
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 body a {
   text-decoration: none;
-  color: white;
+  color: #000;
 }
 
 /* ===================== منو ===================== */
@@ -40,7 +41,6 @@ body a {
   color: #dd2a47;
 }
 
-/* آیتم‌های دراپ‌داون */
 .navbar-custom .dropdown-item {
   color: black;
   transition: 0.3s;
@@ -63,7 +63,6 @@ body a {
   color: white;
 }
 
-/* دکمه آیکون کاربر */
 .btn-icon {
   background-color: transparent;
   border: none;
@@ -80,10 +79,8 @@ body a {
 
 .btn-icon:hover .icon-img {
   content: url('user-pink.svg');
-  cursor: pointer;
 }
 
-/* دکمه سبد خرید */
 .btn-cart {
   background-color: transparent;
   border: none;
@@ -100,7 +97,6 @@ body a {
 
 .btn-cart:hover .icon-img {
   content: url('trolley-pink.svg');
-  cursor: pointer;
 }
 
 /* ===================== باکس سرچ ===================== */
@@ -136,7 +132,6 @@ body a {
   transition: 0.3s;
 }
 
-/* حالت فوکوس روی سرچ */
 .search-box:focus-within {
   background-color: #dd2a47;
   box-shadow: 0 0 8px rgba(221, 42, 71, 0.7);
@@ -312,23 +307,15 @@ body a {
 }
 
 .blog-content {
-  background-color: #E6D5B8; /* بژ گرم */
+  background-color: #E6D5B8;
   border-radius: 15px;
   padding: 2rem;
   text-align: right;
 }
 
-.blog-content h1 {
-  font-size: 1.75rem;
-}
-
-.blog-content h2 {
-  font-size: 1.5rem;
-}
-
-.blog-content h3 {
-  font-size: 1rem;
-}
+.blog-content h1 { font-size: 1.75rem; }
+.blog-content h2 { font-size: 1.5rem; }
+.blog-content h3 { font-size: 1rem; }
 
 .blog-img {
   width: 100%;
@@ -360,14 +347,14 @@ body a {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
-  background-color: #E6D5B8; /* بژ گرم */
-  box-shadow: 0 4px 15px rgba(216, 216, 216, 0.6); /* خاکستری مه‌آلود */
+  background-color: #E6D5B8;
+  box-shadow: 0 4px 15px rgba(216, 216, 216, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(163, 177, 138, 0.6); /* سبز زیتونی در هاور */
+  box-shadow: 0 6px 18px rgba(163, 177, 138, 0.6);
 }
 
 .blog-card img {
@@ -377,14 +364,12 @@ body a {
   filter: brightness(0.9);
 }
 
-/* افکت روی عکس */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to top, #797979, rgba(230, 213, 184, 0));
 }
 
-/* عنوان بلاگ روی عکس */
 .blog-title {
   position: absolute;
   bottom: 55px;
@@ -396,7 +381,6 @@ body a {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
-/* دکمه شیشه‌ای */
 .glass-btn {
   position: absolute;
   bottom: 10px;
@@ -417,4 +401,131 @@ body a {
   background: #dd2a47;
   box-shadow: 0 4px 12px #dd2a47;
   transform: translateX(-50%) scale(1.05);
+}
+
+/* ===================== درباره ما ===================== */
+.about-section {
+  background-color: #E6D5B8;
+  border-radius: 15px;
+}
+
+.about-section img {
+  border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  font-weight: bold;
+}
+
+/* ===================== چرا سترا ===================== */
+.why-setra {
+  background-color: #ccd8b7;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+}
+
+.why-setra h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* کارت‌های خدمات */
+.service-card {
+  border: none;
+  border-radius: 15px;
+  width: 160px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.service-card h6 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.about-section, .why-setra {
+  max-width: 1000px; /* محدود کردن عرض برای وسط چین */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.about-section p {
+  text-align: justify; /* متن درباره ما */
+}
+
+.why-setra .carousel-inner {
+  margin-top: 20px;
+}
+
+.service-card {
+  margin: 0 auto;
+}
+
+/* ===================== کنترل‌های اسلایدر ===================== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(50%) sepia(30%) saturate(200%) hue-rotate(40deg);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+/* ===================== فوتر ===================== */
+footer,
+.footer-section {
+  color: #000;
+  padding: 2rem 0;
+}
+
+.footer-section {
+  background-color: #b21f38;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer hr {
+  border-color: rgba(255, 255, 255, 0.479);
+}
+
+.small {
+  font-size: 0.9rem;
 }
