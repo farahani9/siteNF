@@ -179,6 +179,53 @@ body {
   margin: 0 auto;
 }
 
+/* ===================== سوالات متداول ===================== */
+/* کارت‌های بخش سوالات متداول */
+/* کارت‌های بخش سوالات متداول */
+.faq-card {
+  border: 2px solid #A3B18A;       /* حاشیه سبز زیتونی */
+  border-radius: 12px;             /* گوشه‌های گرد */
+  background-color: #fff;          /* پس‌زمینه سفید */
+  box-shadow: 0 4px 12px rgba(163, 177, 138, 0.2); /* سایه ملایم */
+  transition: all 0.3s ease;
+  padding: 20px;
+  min-height: 200px;               /* ارتفاع مناسب */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* افکت هاور */
+.faq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+
+/* عنوان کارت */
+.faq-card h7 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #344E41;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+/* آیکون کارت */
+.faq-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* متن توضیح */
+.faq-card p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin: 0;
+}
 /* ===================== کنترل‌های اسلایدر ===================== */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
