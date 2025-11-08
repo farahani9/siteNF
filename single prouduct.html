@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="FatemehArabkhorasani">
+  <title>درباره ما - سترا</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+ <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+         <img src="img/2.svg" alt="لوگوی فروشگاه" style="height:60px; width:auto;">
+         <span class="text-black fw-bold">سترا</span>
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
+        </ul>
+
+        <!-- باکس سرچ -->
+        <form class="d-flex mx-auto">
+          <div class="input-group search-box w-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img">
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید">
+          </div>
+        </form>
+
+        <!-- دکمه‌ها -->
+        <div class="d-flex">
+          <button class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </button>
+          <button class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+ <!-- ================== prouduct ================== -->
+<style>
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            height: fit-content;
+        }
+        
+        .color-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .color-option:hover {
+            transform: scale(1.1);
+            border-color: #A3B18A;
+        }
+        
+        .color-option.selected {
+            border-color: #A3B18A;
+            box-shadow: 0 0 0 2px rgba(163, 177, 138, 0.3);
+        }
+        
+        .price-section {
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .add-to-cart-btn {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .add-to-cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+        }
+        
+        .viewers-badge {
+            background: #e3f2fd;
+            color: #1976d2;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 12px;
+        }
+        
+        .size-guide-link {
+            color: #A3B18A;
+            text-decoration: none;
+            border-bottom: 1px dashed #A3B18A;
+            cursor: pointer;
+        }
+        
+        .add-comment-btn {
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .add-comment-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(163, 177, 138, 0.4);
+        }
+        
+        .product-image {
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .about-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 15px 0;
+            border-left: 4px solid #A3B18A;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+        }
+        
+        .brand-highlight {
+            color: #A3B18A;
+            font-weight: bold;
+        }
+        
+        .product-benefits {
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="row">
+        <!-- ستون سمت راست: عکس محصول -->
+        <div class="col-lg-4 mb-4">
+            <div class="text-center">
+              <h1 class="text-center mb-4">ست زنانه ربکا کد1234</h1>
+                <img src="img/product.jpeg" width="300" height="300"
+                     alt="ست مخصوص ربکا" 
+                     class="product-image">
+                               <strong>از سترا خرید کردن چه مزیتی دارد؟</strong></p>
+                                   <p>1.تخفیف های باور نکردنی</p>
+                                    <p>2.مرجوعی کالا تا 7روز</p>
+                                       <p>3.آیینه مجازی</p>
+                                     <p>4.ست سازی هوشمند</p>
+            </div>
+        </div>
+        
+        <!-- ستون وسط: مشخصات محصول -->
+        <div class="col-lg-4 mb-4">
+            <div class="product-card p-4">
+                <h3 class="mb-4 text-center" style="color: #2c3e50; border-bottom: 2px solid #A3B18A; padding-bottom: 10px;">
+                    مشخصات محصول
+                </h3>
+
+                <!-- بخش انتخاب رنگ -->
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3" style="color: #A3B18A;">انتخاب رنگ:</h6>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <div class="color-option" style="background-color: #A3B18A;" data-color="سبز"></div>
+                        <div class="color-option" style="background-color: #FADADD;" data-color="صورتی"></div>
+                        <div class="color-option" style="background-color: #dc3545;" data-color="قرمز"></div>
+                        <div class="color-option" style="background-color: #f8e8cd;" data-color="کرم"></div>
+                        <div class="color-option" style="background-color: #358bdc;" data-color="آبی"></div>
+                        <div class="color-option" style="background-color: #000000;" data-color="مشکی"></div>
+                    </div>
+                    <small class="text-muted mt-2 d-block">رنگ انتخاب شده: <span id="selected-color">کرم</span></small>
+                </div>
+
+                <!-- بخش قیمت و دکمه خرید -->
+                <div class="price-section mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <h4 class="fw-bold mb-1">1,000,000 تومان</h4>
+                            <small>قیمت نهایی</small>
+                        </div>
+                        <div class="col-6 text-start">
+                            <button class="add-to-cart-btn w-100">
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تعداد مشاهده کنندگان -->
+                <div class="mb-4 text-center">
+                    <span class="viewers-badge">
+                        <i class="bi bi-eye-fill"></i> ۱۲ نفر در حال مشاهده این محصول هستند!
+                    </span>
+                </div>
+
+                <!-- راهنمای سایز -->
+                <div class="mb-4">
+                    <a href="#" class="size-guide-link">
+                        <i class="bi bi-rulers"></i> راهنمای اندازه
+                    </a>
+                    <p class="mt-2"><strong>سایز:</strong> فیری سایز</p>
+                </div>
+
+                <!-- سوالات متداول -->
+                <div class="question-section mb-4">
+                    <h6 class="fw-bold mb-3" style="color: #A3B18A;">سوالات متداول:</h6>
+                    <div class="mb-3">
+                        <strong>ست مخصوص ربکا چیست؟</strong>
+                        <p class="text-muted small mt-1">این محصول اختصاصی توسط طراح سترا طراحی شده.</p>
+                    </div>
+                </div>
+
+                <!-- بخش امتیازدهی -->
+                <div class="rating-section mt-4 pt-3 border-top">
+                    <h6 class="fw-bold mb-3" style="color: #A3B18A;">امتیازدهی:</h6>
+                    <div class="d-flex gap-2 mb-3 flex-wrap">
+                        <button class="btn btn-outline-primary btn-sm">عالی</button>
+                        <button class="btn btn-outline-success btn-sm">خوب بود</button>
+                        <button class="btn btn-outline-info btn-sm">دوست داشتم</button>
+                        <button class="btn btn-outline-secondary btn-sm">علاقه نداشتم</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ستون سمت چپ: فرم نظرسنجی -->
+        <div class="col-lg-4 mb-4">
+            <div class="product-card p-4">
+                <h3 class="mb-4 text-center" style="color: #2c3e50; border-bottom: 2px solid #A3B18A; padding-bottom: 10px;">
+                    نظر شما
+                </h3>
+                <!-- فرم نظرسنجی -->
+                <div class="mb-3">
+                    <label class="form-label">نظر شما</label>
+                    <textarea class="form-control" rows="5" placeholder="نظر خود را درباره این محصول بنویسید..."></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="نام شما">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="ایمیل شما">
+                    </div>
+                </div>
+                <button class="add-comment-btn w-100">
+                    <i class="bi bi-send"></i> ارسال نظر
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- بخش توضیحات سترا و محصول -->
+<div class="container">
+    <div class="about-section">
+        <div class="row align-items-center">
+            <div class="col-lg-12 text-center mb-5">
+                <h1 class="display-5 fw-bold mb-4" style="color: #2c3e50;">
+                    <span class="brand-highlight">سترا</span> - تجربه‌ای متفاوت در دنیای مد
+                </h1>
+                <p class="lead text-muted">
+                    مجموعه سترا با تکیه بر سال‌ها تجربه در طراحی و تولید پوشاک، مفتخر است که محصولات منحصر به فردی را با بالاترین استانداردهای کیفیت ارائه می‌دهد.
+                </p>
+            </div>
+        </div>
+
+        <!-- ویژگی‌های برند سترا -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="feature-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-star-fill text-white fs-5"></i>
+                        </div>
+                        <h4 class="mb-0" style="color: #2c3e50;">طراحی انحصاری</h4>
+                    </div>
+                    <p class="text-muted mb-0">
+                        هر محصول سترا با دقت و ظرافت طراحی شده و از طرح‌های تکراری و معمولی دوری می‌کند. تیم طراحی ما همواره در تلاش است تا جدیدترین ترندهای دنیای مد را در محصولات منعکس کند.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-shield-check text-white fs-5"></i>
+                        </div>
+                        <h4 class="mb-0" style="color: #2c3e50;">کیفیت تضمینی</h4>
+                    </div>
+                    <p class="text-muted mb-0">
+                        استفاده از بهترین پارچه‌های طبیعی و دوخت با کیفیت، تضمین‌کننده ماندگاری و راحتی محصولات سترا است. ما به کیفیت افتخار می‌کنیم.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- معرفی محصول ست ربکا -->
+        <div class="product-benefits">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3 class="fw-bold mb-3">ست مخصوص ربکا - نماد شکوه و elegance</h3>
+                    <p class="mb-4">
+                        این ست اختصاصی که با نام "ربکا" طراحی شده، ترکیبی بی‌نظیر از سنت و مدرنیته است. هر قطعه از این ست با توجه به کوچکترین جزئیات طراحی شده تا تجربه‌ای منحصر به فرد برای شما خلق کند.
+                    </p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> پارچه 100% طبیعی</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> دوخت دقیق و با کیفیت</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> طراحی منحصر به فرد</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> رنگ‌بندی مدرن</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> قابلیت فیری سایز</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i> مناسب تمام فصول</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="bg-white rounded p-4" style="color: #2c3e50;">
+                        <i class="bi bi-award-fill fs-1 mb-3" style="color: #A3B18A;"></i>
+                        <h5>گارانتی اصالت</h5>
+                        <p class="small mb-0">تضمین اصل بودن محصول</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- سخن پایانی -->
+        <div class="text-center mt-5 pt-4 border-top">
+            <h4 class="mb-3" style="color: #2c3e50;">به خانواده سترا بپیوندید</h4>
+            <p class="text-muted mb-4">
+                با انتخاب سترا، نه تنها یک محصول با کیفیت خریداری می‌کنید، بلکه سبک زندگی لاکچری و منحصر به فردی را تجربه خواهید کرد.
+            </p>
+            <button class="btn px-5 py-3" style="background: #A3B18A; color: white; border-radius: 25px;">
+                <i class="bi bi-bag-check me-2"></i>
+                همین حالا خرید کنید
+            </button>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // انتخاب رنگ
+    document.querySelectorAll('.color-option').forEach(option => {
+        option.addEventListener('click', function() {
+            // حذف انتخاب قبلی
+            document.querySelectorAll('.color-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // انتخاب جدید
+            this.classList.add('selected');
+            document.getElementById('selected-color').textContent = this.getAttribute('data-color');
+        });
+    });
+
+    // انتخاب رنگ کرم به صورت پیشفرض
+    document.querySelectorAll('.color-option')[3].classList.add('selected');
+</script>
+        <!-- ستون سمت چپ: فرم نظرات -->
+        <div class="col-lg-4 mb-4">
+            <div class="product-card p-4">
+                <h3 class="mb-4 text-center" style="color: #2c3e50; border-bottom: 2px solid #A3B18A; padding-bottom: 10px;">
+</body>
+</html>
