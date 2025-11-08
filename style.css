@@ -577,7 +577,239 @@ body a {
 .service-card {
   margin: 0 auto;
 }
+ /* =====================  محصولات پیشنهادی ===================== */
+        
+        .centered-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 40px;
+            border: none;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .product-slide-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 3px solid #e9ecef;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            text-align: center;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            max-width: 280px;
+        }
+        
+        .product-slide-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border-color: #A3B18A;
+        }
+        
+        .best-seller-badge {
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            box-shadow: 0 2px 8px rgba(163, 177, 138, 0.3);
+            z-index: 2;
+        }
+        
+        .product-image-container {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #f1f3f4;
+            position: relative;
+        }
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-slide-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        .product-price {
+            color: #A3B18A;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 8px 0;
+        }
+        
+        .add-to-cart-btn {
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(163, 177, 138, 0.3);
+        }
+        
+        .add-to-cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(163, 177, 138, 0.5);
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 45px;
+            height: 45px;
+            background: #A3B18A;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.9;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .carousel-control-prev {
+            left: -20px;
+        }
+        
+        .carousel-control-next {
+            right: -20px;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: #8a9a6e;
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+        }
 
+        .carousel-indicators {
+            position: static;
+            margin: 30px 0 0 0;
+            justify-content: center;
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: #A3B18A;
+            border: 2px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .carousel-indicators .active {
+            background-color: #2c3e50;
+            transform: scale(1.1);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 25px 0;
+        }
+
+        .section-title {
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: #6c757d;
+            font-size: 1.1rem;
+            margin-top: 8px;
+        }
+        .centered-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 40px;
+            border: none;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            width: 95%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .product-slide-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 3px solid #e9ecef;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            text-align: center;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            max-width: 280px;
+        }
+        
+        .product-slide-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border-color: #A3B18A;
+        }
+        
+        .best-seller-badge {
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            box-shadow: 0 2px 8px rgba(163, 177, 138, 0.3);
+            z-index: 2;
+        }
+        
+        .product-image-container {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid #f1f3f4;
+            position: relative;
+        }
 /* ===================== کنترل‌های اسلایدر ===================== */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -588,3 +820,4 @@ body a {
 .carousel-control-next {
   width: 5%;
 }
+
