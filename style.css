@@ -24,7 +24,7 @@ body {
 
 body a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 /* ===================== منو ===================== */
@@ -403,4 +403,188 @@ body a {
   transform: translateX(-50%) scale(1.05);
 }
 
+/* ===================== درباره ما ===================== */
+.about-section {
+  background-color: #E6D5B8;
+  border-radius: 15px;
+}
 
+.about-section img {
+  border-radius: 15px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  font-weight: bold;
+}
+
+/* ===================== چرا سترا ===================== */
+.service-card {
+  border: 2px solid #A3B18A;       /* حاشیه سبز زیتونی */
+  border-radius: 10px;
+  background-color: #fdfdfd;       /* رنگ روشن‌تر برای تمایز */
+  box-shadow: 0 2px 8px rgba(163, 177, 138, 0.2);
+  transition: all 0.3s ease;
+  padding: 15px;
+  min-height: 180px;               /* کارت‌ها کمی کوچک‌تر */
+}
+.service-card h6 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #344E41;
+  margin-bottom: 6px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.service-card img {
+  width: 45px;                     /* تصویر کوچک‌تر */
+  margin-bottom: 8px;
+}
+/* =====================  استایل جدول ===================== */
+
+.service-card {
+  border: 2px solid #A3B18A;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(163, 177, 138, 0.2);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+/* استایل کلی جدول خدمات */
+.service-box {
+  border: 2px solid #A3B18A;         /* حاشیه سبز زیتونی */
+  border-radius: 12px;               /* گوشه‌های گرد */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(163, 177, 138, 0.2); /* سایه ملایم */
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* افکت هاور برای برجسته شدن */
+.service-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+
+/* آیکون داخل باکس */
+.service-box img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* عنوان و توضیح */
+.service-box h5 {
+  color: #344E41;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.service-box p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.service-card {
+  border: 2px solid #A3B18A;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+.why-setra {
+  background-color: #ccd8b7;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+}
+
+.why-setra h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* کارت‌های خدمات */
+.service-card {
+  border: none;
+  border-radius: 15px;
+  width: 160px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.service-card h6 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.about-section, .why-setra {
+  max-width: 1000px; /* محدود کردن عرض برای وسط چین */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.about-section p {
+  text-align: justify; /* متن درباره ما */
+}
+
+.why-setra .carousel-inner {
+  margin-top: 20px;
+}
+
+.service-card {
+  margin: 0 auto;
+}
+
+/* ===================== کنترل‌های اسلایدر ===================== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(50%) sepia(30%) saturate(200%) hue-rotate(40deg);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
