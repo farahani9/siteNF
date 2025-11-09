@@ -3,7 +3,568 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="NargessFarahani<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="FatemehArabkhorasani">
+  <title>محصولات - سترا</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+ <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+         <img src="img/2.svg" alt="لوگوی فروشگاه" style="height:60px; width:auto;">
+         <span class="text-black fw-bold">سترا</span>
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
+        </ul>
+
+        <!-- باکس سرچ -->
+        <form class="d-flex mx-auto">
+          <div class="input-group search-box w-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img">
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید">
+          </div>
+        </form>
+
+        <!-- دکمه‌ها -->
+        <div class="d-flex">
+          <button class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </button>
+          <button class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+ <!-- ================== prouduct ================== -->
+ <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+
+<div class="container my-5">
+    <div class="row">
+        <!-- ستون سمت راست: عکس محصول -->
+ <div class="container my-5">
+    <div class="row">
+        <!-- ستون سمت راست: عکس محصول -->
+        <div class="col-lg-4 mb-4">
+            <div class="text-center">
+              <h1 class="text-center mb-4">ست زنانه ربکا کد1234</h1>
+                <img src="img/product.jpeg" width="500" height="500"
+                     alt="ست مخصوص ربکا" 
+                     class="product-image">
+            </div>
+        </div>
+        
+        <!-- ستون وسط: مشخصات محصول -->
+        <div class="col-lg-4 mb-4">
+            <div class="product-card p-4">
+                <h3 class="mb-4 text-center" style="color: #2c3e50; border-bottom: 2px solid #A3B18A; padding-bottom: 10px;">
+                    مشخصات محصول
+                </h3>
+
+                <!-- بخش انتخاب رنگ -->
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3" style="color: #A3B18A;">انتخاب رنگ:</h6>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <div class="color-option" style="background-color: #A3B18A;" data-color="سبز"></div>
+                        <div class="color-option" style="background-color: #FADADD;" data-color="صورتی"></div>
+                        <div class="color-option" style="background-color: #dc3545;" data-color="قرمز"></div>
+                        <div class="color-option" style="background-color: #f8e8cd;" data-color="کرم"></div>
+                        <div class="color-option" style="background-color: #358bdc;" data-color="آبی"></div>
+                        <div class="color-option" style="background-color: #000000;" data-color="مشکی"></div>
+                    </div>
+                    <small class="text-muted mt-2 d-block">رنگ انتخاب شده: <span id="selected-color">کرم</span></small>
+                </div>
+
+                <!-- بخش قیمت و دکمه خرید -->
+                <div class="price-section mb-4">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <h4 class="fw-bold mb-1">1,000,000 تومان</h4>
+                            <small>قیمت نهایی</small>
+                        </div>
+                        <div class="col-6 text-start">
+                            <button class="add-to-cart-btn w-100">
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تعداد مشاهده کنندگان -->
+                <div class="mb-4 text-center">
+                    <span class="viewers-badge">
+                        <i class="bi bi-eye-fill"></i> ۱۲ نفر در حال مشاهده این محصول هستند!
+                    </span>
+                </div>
+
+                <!-- راهنمای سایز -->
+                <div class="mb-4">
+                    <a href="#" class="size-guide-link">
+                        <i class="bi bi-rulers"></i> راهنمای اندازه
+                    </a>
+                    <p class="mt-2"><strong>سایز:</strong> فیری سایز</p>
+                </div>
+
+                <!-- سوالات متداول -->
+                <div class="question-section mb-4">
+                    <h6 class="fw-bold mb-3" style="color: #A3B18A;">سوالات متداول:</h6>
+                    <div class="mb-3">
+                              <strong>از سترا خرید کردن چه مزیتی دارد؟</strong></p>
+                                   <p>1.تخفیف های باور نکردنی</p>
+                                    <p>2.مرجوعی کالا تا 7روز</p>
+                                       <p>3.آیینه مجازی</p>
+                                     <p>4.ست سازی هوشمند</p>
+                        <strong>ست مخصوص ربکا چیست؟</strong>
+                        <p class="text-muted small mt-1">این محصول اختصاصی توسط طراح سترا طراحی شده.</p>
+                    </div>
+                </div>
+
+                <!-- بخش امتیازدهی -->
+                <div class="rating-section mt-4 pt-3 border-top">
+                    <h6 class="fw-bold mb-3" style="color: #A3B18A;">امتیازدهی:</h6>
+                    <div class="d-flex gap-2 mb-3 flex-wrap">
+                        <button class="btn btn-outline-primary btn-sm">عالی</button>
+                        <button class="btn btn-outline-success btn-sm">خوب بود</button>
+                        <button class="btn btn-outline-info btn-sm">دوست داشتم</button>
+                        <button class="btn btn-outline-secondary btn-sm">علاقه نداشتم</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ستون سمت چپ: فرم نظرسنجی -->
+        <div class="col-lg-4 mb-4">
+            <div class="product-card p-4">
+                <h3 class="mb-4 text-center" style="color: #2c3e50; border-bottom: 2px solid #A3B18A; padding-bottom: 10px;">
+                    نظر شما
+                </h3>
+                <!-- فرم نظرسنجی -->
+                <div class="mb-3">
+                    <label class="form-label">نظر شما</label>
+                    <textarea class="form-control" rows="5" placeholder="نظر خود را درباره این محصول بنویسید..."></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" placeholder="نام شما">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" placeholder="ایمیل شما">
+                    </div>
+                </div>
+                <button class="add-comment-btn w-100">
+                    <i class="bi bi-send"></i> ارسال نظر
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="about-section">
+        <!-- هدر مختصر -->
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <h3 class="fw-bold mb-3" style="color: #2c3e50;">
+                    <span class="brand-highlight">سترا</span> - سبک زندگی 
+                </h3>
+                <p class="text-muted mb-0">
+                    طراحی منحصر به فرد، کیفیت بی‌نظیر
+                </p>
+            </div>
+        </div>
+
+        <!-- ویژگی‌های برند به صورت فشرده -->
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-star-fill text-white"></i>
+                        </div>
+                        <h6 class="mb-0" style="color: #2c3e50;">طراحی انحصاری</h6>
+                    </div>
+                    <p class="text-muted small mb-0">
+                        طرح‌های منحصر به فرد دور از کلیشه‌های معمول
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-shield-check text-white"></i>
+                        </div>
+                        <h6 class="mb-0" style="color: #2c3e50;">کیفیت تضمینی</h6>
+                    </div>
+                    <p class="text-muted small mb-0">
+                        پارچه‌های درجه یک و دوخت با دقت
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="icon-wrapper">
+                            <i class="bi bi-palette text-white"></i>
+                        </div>
+                        <h6 class="mb-0" style="color: #2c3e50;">جنس پارچه</h6>
+                    </div>
+                    <p class="text-muted small mb-0">
+                        پارچه نخی مرغوب با قابلیت تنفس عالی
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- معرفی محصول و جنس پارچه -->
+        <div class="product-benefits mt-4">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h5 class="fw-bold mb-3">ست ربکا  </h5>
+                    <p class="mb-3 small opacity-90">
+                       دوخت انحصاری با طراح انحصاری سترا
+                    </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled small">
+                                <li class="mb-1"><i class="bi bi-check-circle me-2"></i> پارچه نخی طبیعی</li>
+                                <li class="mb-1"><i class="bi bi-check-circle me-2"></i> دوخت دقیق</li>
+                                <li class="mb-1"><i class="bi bi-check-circle me-2"></i> طراحی انحصاری</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled small">
+                                <li class="mb-1"><i class="bi bi-check-circle me-2"></i> رنگ‌بندی مدرن</li>
+                                <li class="mb-1"><i class="bi bi-check-circle me-2"></i> فیری سایز</li>
+                                <li class="mb-1"><i class="bi bi-check-circle me-2"></i> چندفصلی</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 text-center mt-3 mt-md-0">
+                    <div class="bg-white rounded p-3" style="color: #2c3e50;">
+                        <i class="bi bi-award-fill fs-4 mb-2" style="color: #A3B18A;"></i>
+                        <h6 class="mb-1">گارانتی اصالت</h6>
+                        <p class="small mb-0 text-muted">تضمین کیفیت</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- بخش جنس پارچه -->
+        <div class="fabric-info mt-3">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h6 class="fw-bold mb-2" style="color: #2c3e50;">جنس پارچه ست ربکا</h6>
+                    <p class="small text-muted mb-0">
+                        پارچه نخی 100% طبیعی با بافت مخصوص - نرم، سبک و دارای قابلیت تنفس عالی. 
+                        مناسب برای تمام فصول، ضد حساسیت و با قابلیت شستشوی آسان.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="d-flex justify-content-center gap-3">
+                        <div class="text-center">
+                            <i class="bi bi-droplet fs-5" style="color: #A3B18A;"></i>
+                            <p class="small mb-0 mt-1">قابلیت تنفس</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="bi bi-flower1 fs-5" style="color: #A3B18A;"></i>
+                            <p class="small mb-0 mt-1">ضد حساسیت</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="bi bi-thermometer fs-5" style="color: #A3B18A;"></i>
+                            <p class="small mb-0 mt-1">همه فصل</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // انتخاب رنگ
+    document.querySelectorAll('.color-option').forEach(option => {
+        option.addEventListener('click', function() {
+            // حذف انتخاب قبلی
+            document.querySelectorAll('.color-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // انتخاب جدید
+            this.classList.add('selected');
+            document.getElementById('selected-color').textContent = this.getAttribute('data-color');
+        });
+    });
+
+    // انتخاب رنگ کرم به صورت پیشفرض
+    document.querySelectorAll('.color-option')[3].classList.add('selected');
+</script>
+        <!-- ستون سمت چپ: فرم نظرات -->
+        <div class="col-lg-4 mb-4">
+            <div class="product-card p-4">
+                <h3 class="mb-4 text-center" style="color: #2c3e50; border-bottom: 2px solid #A3B18A; padding-bottom: 10px;">
+</body>
+</html>
+<!-- ==================ست پیشنهادی ================== -->
+ <br>
+ <br>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+ <!-- بخش ست های پیشنهادی -->
+
+                <i class="bi bi-stars me-2" style="color: #A3B18A;"></i>
+                 ست های پیشنهادی   
+            </h1>
+            <p class="section-subtitle">پرطرفدارترین و پرفروش ترین ست های سترا</p>
+        </div>
+
+        <!-- اسلایدر محصولات -->
+        <div id="bestSellerCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                
+    </div>
+       
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<div class="container">
+    <div class="centered-section">
+        <div class="section-header">
+            <h1 class="section-title">
+                <i class="bi bi-stars me-2" style="color: #A3B18A;"></i>
+                ست های مرتبط
+            </h1>
+        </div>
+
+        <!-- اسلایدر محصولات -->
+        <div id="bestSellerCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                
+                <!-- اسلاید اول -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+                            <div class="product-slide-card position-relative">
+                                <span class="best-seller-badge">پرفروش</span>
+                                <div class="product-image-container">
+                                    <img src="img/pastel.jpeg" 
+                                         alt="ست رایکا" 
+                                         class="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="fw-bold mb-1">ست رایکا</h6>
+                                    <p class="text-muted small mb-2">طراحی انحصاری سترا</p>
+                                    <div class="product-price">1,200,000 تومان</div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="bi bi-cart-plus me-1"></i> افزودن به سبد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+                            <div class="product-slide-card position-relative">
+                                <span class="best-seller-badge">پرفروش</span>
+                                <div class="product-image-container">
+                                    <img src="img/venteg.jpg" 
+                                         alt="ست وینتج" 
+                                         class="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="fw-bold mb-1">ست وینتج</h6>
+                                    <p class="text-muted small mb-2">طرح مدرن و شیک</p>
+                                    <div class="product-price">980,000 تومان</div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="bi bi-cart-plus me-1"></i> افزودن به سبد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+                            <div class="product-slide-card position-relative">
+                                <span class="best-seller-badge">پرفروش</span>
+                                <div class="product-image-container">
+                                    <img src="img/retro.jpg" 
+                                         alt="ست رترو" 
+                                         class="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="fw-bold mb-1">ست رترو</h6>
+                                    <p class="text-muted small mb-2">رنگ‌بندی خاص</p>
+                                    <div class="product-price">1,100,000 تومان</div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="bi bi-cart-plus me-1"></i> افزودن به سبد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+                            <div class="product-slide-card position-relative">
+                                <span class="best-seller-badge">پرفروش</span>
+                                <div class="product-image-container">
+                                    <img src="img/kelasic.jpeg" 
+                                         alt="ست کلاسیک" 
+                                         class="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="fw-bold mb-1">ست کلاسیک</h6>
+                                    <p class="text-muted small mb-2">کلاسیک چشم گیر</p>
+                                    <div class="product-price">1,350,000 تومان</div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="bi bi-cart-plus me-1"></i> افزودن به سبد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- اسلاید دوم -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+                            <div class="product-slide-card position-relative">
+                                <span class="best-seller-badge">پرفروش</span>
+                                <div class="product-image-container">
+                                    <img src="img/kazhval.jpg" 
+                                         alt="ست کژوال" 
+                                         class="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="fw-bold mb-1">ست کژوال</h6>
+                                    <p class="text-muted small mb-2">جسورانه و خاص</p>
+                                    <div class="product-price">950,000 تومان</div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="bi bi-cart-plus me-1"></i> افزودن به سبد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+                            <div class="product-slide-card position-relative">
+                                <span class="best-seller-badge">پیشنهادی</span>
+                                <div class="product-image-container">
+                                    <img src="img/kafsh.jpg" 
+                                         alt="کفش تیارا" 
+                                         class="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="fw-bold mb-1">کفش تیارا</h6>
+                                    <p class="text-muted small mb-2">همیشه شیک</p>
+                                    <div class="product-price">1,150,000 تومان</div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="bi bi-cart-plus me-1"></i> افزودن به سبد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+                            <div class="product-slide-card position-relative">
+                                <span class="best-seller-badge">پیشنهادی</span>
+                                <div class="product-image-container">
+                                    <img src="img/kif.jpg" 
+                                         alt="کیف تینا" 
+                                         class="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="fw-bold mb-1">کیف تینا</h6>
+                                    <p class="text-muted small mb-2">طرح محدود</p>
+                                    <div class="product-price">1,450,000 تومان</div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="bi bi-cart-plus me-1"></i> افزودن به سبد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 mb-4">
+                            <div class="product-slide-card position-relative">
+                                <span class="best-seller-badge">پیشنهادی</span>
+                                <div class="product-image-container">
+                                    <img src="img/eynak.jpg" 
+                                         alt="عینک گوچی" 
+                                         class="product-image">
+                                </div>
+                                <div class="product-content">
+                                    <h6 class="fw-bold mb-1">عینک گوچی</h6>
+                                    <p class="text-muted small mb-2">رنگ سال 2024</p>
+                                    <div class="product-price">1,280,000 تومان</div>
+                                    <button class="add-to-cart-btn">
+                                        <i class="bi bi-cart-plus me-1"></i> افزودن به سبد
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- نشانگرهای اسلاید -->
+        <div class="text-center mt-4">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="اسلاید 1"></button>
+                <button type="button" data-bs-target="#bestSellerCarousel" data-bs-slide-to="1" aria-label="اسلاید 2"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+rasani">
   <title>محصولات - سترا</title>
 
   <!-- Bootstrap -->
@@ -551,3 +1112,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
