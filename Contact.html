@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="FatemehArabkhorasani">
+  <title>تماس با ما - سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" style="height:60px;">
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منوی اصلی -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+              <li><a class="dropdown-item" href="#">کفش</a></li>
+              <li><a class="dropdown-item" href="#">عینک</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
+        </ul>
+
+        <!-- سرچ -->
+        <form class="d-flex mx-auto">
+          <div class="input-group search-box w-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img">
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید">
+          </div>
+        </form>
+
+        <!-- آیکون‌ها -->
+        <div class="d-flex">
+          <button class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </button>
+          <button class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================== Contact Section ================== -->
+  <section class="contact-wrapper py-5">
+    <div class="container px-3 px-md-5">
+      <div class="row g-4 align-items-start">
+
+        <!-- اطلاعات تماس -->
+        <div class="col-12 col-lg-6">
+          <div class="contact-info-section text-center text-lg-start">
+            <h2 class="contact-info-title mb-4">با ما در تماس باشید</h2>
+            <div class="contact-items d-flex flex-column gap-3 align-items-center align-items-lg-start">
+              <div class="contact-item d-flex align-items-center gap-2">
+                <i class="bi bi-telephone-fill"></i>
+                <span>0912-000-0000</span>
+              </div>
+              <div class="contact-item d-flex align-items-center gap-2">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>تهران، ایران</span>
+              </div>
+              <div class="contact-item d-flex align-items-center gap-2">
+                <i class="bi bi-envelope-fill"></i>
+                <span>info@example.com</span>
+              </div>
+              <div class="contact-item mt-3">
+                <span>راه‌های ارتباطی با ما:</span>
+                <div class="social-links d-flex gap-3 mt-2">
+                  <a href="#"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-telegram"></i></a>
+                  <a href="#"><i class="bi bi-whatsapp"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- نقشه -->
+          <div class="map-section mt-4 rounded overflow-hidden">
+            <h2 class="text-center mb-3 mapTitle">موقعیت ما روی نقشه</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13079.64496401003!2d50.81269252070233!3d34.56567266422386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e02b3c7f1f6a5%3A0x4f3dc3b3d61b2c6f!2z2KfZhdmI2YbYq9mF2YXYqSDYp9mE2YbZhdmI2YXYp9mE!5e0!3m2!1sen!2sus!4v1698294012345!5m2!1sen!2sus"
+                width="100%" height="100%" style="border:0; height: 245px; border-radius: 15px;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <!-- فرم تماس -->
+        <div class="col-12 col-lg-6">
+          <div class="form-section contact-form-section px-2 px-md-4">
+            <h2 class="form-title mb-4 text-center text-lg-start">نظرات خود را برای ما ارسال کنید</h2>
+
+            <form id="contactForm">
+              <div class="row align-items-center mb-3">
+                <div class="col-auto">
+                  <div id="profileFigure" class="profile-figure" style="background-image:url('img/avatar-women.svg');"></div>
+                </div>
+                <div class="col">
+                  <div class="row g-2">
+                    <div class="col-md-6">
+                      <label for="firstName" class="form-label">نام</label>
+                      <input type="text" id="firstName" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="lastName" class="form-label">نام خانوادگی</label>
+                      <input type="text" id="lastName" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">شماره تماس</label>
+                  <input type="tel" id="phone" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">ایمیل</label>
+                  <input type="email" id="email" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">جنسیت</label>
+                <div class="d-flex gap-3">
+                  <div class="form-check">
+                    <input type="radio" name="gender" id="male" value="male" class="form-check-input">
+                    <label for="male" class="form-check-label">آقا</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" name="gender" id="female" value="female" class="form-check-input" checked>
+                    <label for="female" class="form-check-label">خانم</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">پیام</label>
+                <textarea id="message" rows="5" class="form-control" required></textarea>
+              </div>
+
+              <div class="text-center text-md-end">
+                <button type="submit" class="btn-submit px-4 py-2">ارسال</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== Footer ================== -->
+  <footer class="footer text-dark pt-5 pb-3 position-relative mt-5">
+    <div class="footer-bg"></div>
+    <div class="container position-relative">
+      <div class="row gy-4">
+
+        <div class="col-md-4">
+          <div class="support-box text-center text-light p-4 shadow-lg">
+            <h5 class="fw-bold mb-2">در سترا</h5>
+            <p class="mb-3">پاسخگوی شما هستیم</p>
+            <p class="fw-bold fs-5 mb-1">۰۹۳۹۳۸۹۶۰۶۲</p>
+            <p class="fw-bold fs-5 mb-3">۰۲۱۶۶۲۸۱۳۳۲</p>
+            <a href="#" class="btn btn-light rounded-pill px-4 py-2">تماس با ما</a>
+            <div class="mt-4 d-flex justify-content-center gap-3">
+              <a href="#"><i class="bi bi-instagram text-light fs-5"></i></a>
+              <a href="#"><i class="bi bi-whatsapp text-light fs-5"></i></a>
+              <a href="#"><i class="bi bi-telegram text-light fs-5"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">درباره سترا</h5>
+          <p class="small text-muted">
+            فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.
+          </p>
+          <p class="small fw-bold mb-1">آدرس:</p>
+          <p class="small text-muted">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
+        </div>
+
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">خدمات و پشتیبانی</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
+            <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
+            <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
+          </ul>
+          <img src="img/enamad-one-star.png" alt="نماد اعتماد" style="height:80px;">
+        </div>
+      </div>
+
+      <hr class="my-4">
+      <div class="text-center small text-muted">
+        © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================== Scripts ================== -->
+  <script>
+    const genderRadios = document.querySelectorAll('input[name="gender"]');
+    const profileFigure = document.getElementById('profileFigure');
+
+    genderRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        profileFigure.style.backgroundImage =
+          radio.value === 'male'
+            ? "url('img/avatar-men.svg')"
+            : "url('img/avatar-women.svg')";
+      });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('پیام شما ارسال شد!');
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
