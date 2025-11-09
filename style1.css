@@ -1,0 +1,366 @@
+/* ===================== فونت‌ها ===================== */
+@font-face {
+    font-family: 'IranSansM';
+    src: url('IRANSansX-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IranSansB';
+    src: url('IRANSansX-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    direction: rtl;
+    font-family: 'IranSansM';
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* ===================== چرا سترا ===================== */
+.service-card {
+  border: 2px solid #A3B18A;       /* حاشیه سبز زیتونی */
+  border-radius: 10px;
+  background-color: #fdfdfd;       /* رنگ روشن‌تر برای تمایز */
+  box-shadow: 0 2px 8px rgba(163, 177, 138, 0.2);
+  transition: all 0.3s ease;
+  padding: 15px;
+  min-height: 180px;               /* کارت‌ها کمی کوچک‌تر */
+}
+.service-card h6 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #344E41;
+  margin-bottom: 6px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+.service-card img {
+  width: 45px;                     /* تصویر کوچک‌تر */
+  margin-bottom: 8px;
+}
+/* =====================  استایل جدول ===================== */
+
+.service-card {
+  border: 2px solid #A3B18A;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(163, 177, 138, 0.2);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+/* استایل کلی جدول خدمات */
+.service-box {
+  border: 2px solid #A3B18A;         /* حاشیه سبز زیتونی */
+  border-radius: 12px;               /* گوشه‌های گرد */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(163, 177, 138, 0.2); /* سایه ملایم */
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* افکت هاور برای برجسته شدن */
+.service-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+
+/* آیکون داخل باکس */
+.service-box img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+/* عنوان و توضیح */
+.service-box h5 {
+  color: #344E41;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.service-box p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.service-card {
+  border: 2px solid #A3B18A;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+.why-setra {
+  background-color: #ccd8b7;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+}
+
+.why-setra h2 {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* کارت‌های خدمات */
+.service-card {
+  border: none;
+  border-radius: 15px;
+  width: 160px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.service-card h6 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.service-card p {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.about-section, .why-setra {
+  max-width: 1000px; /* محدود کردن عرض برای وسط چین */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.about-section p {
+  text-align: justify; /* متن درباره ما */
+}
+
+.why-setra .carousel-inner {
+  margin-top: 20px;
+}
+
+.service-card {
+  margin: 0 auto;
+}
+
+/* ===================== سوالات متداول ===================== */
+/* کارت‌های بخش سوالات متداول */
+/* کارت‌های بخش سوالات متداول */
+.faq-card {
+  border: 2px solid #A3B18A;       /* حاشیه سبز زیتونی */
+  border-radius: 12px;             /* گوشه‌های گرد */
+  background-color: #fff;          /* پس‌زمینه سفید */
+  box-shadow: 0 4px 12px rgba(163, 177, 138, 0.2); /* سایه ملایم */
+  transition: all 0.3s ease;
+  padding: 20px;
+  min-height: 200px;               /* ارتفاع مناسب */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* افکت هاور */
+.faq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(163, 177, 138, 0.3);
+}
+
+/* عنوان کارت */
+.faq-card h7 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #344E41;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+
+/* آیکون کارت */
+.faq-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* متن توضیح */
+.faq-card p {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+  margin: 0;
+}
+/* ===================== کنترل‌های اسلایدر ===================== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(50%) sepia(30%) saturate(200%) hue-rotate(40deg);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+/* استایل بخش محصولات */
+        .products-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid #e9ecef;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #A3B18A;
+        }
+        
+        .product-badge {
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .product-price {
+            color: #A3B18A;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        
+        .add-to-cart-btn {
+            background: linear-gradient(135deg, #A3B18A 0%, #8a9a6e 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 0.95rem;
+        }
+        
+        .add-to-cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(163, 177, 138, 0.4);
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #A3B18A;
+            display: inline-block;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background: #A3B18A;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+        }
+        
+        .carousel-control-prev {
+            left: -20px;
+        }
+        
+        .carousel-control-next {
+            right: -20px;
+        }
+        
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: #8a9a6e;
+            opacity: 1;
+        }
+
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 5px;
+            background-color: #A3B18A;
+        }
+
+        .carousel-indicators .active {
+            background-color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {}
+            .services-section {
+                padding: 30px 0;
+            }
+            
+            .service-card {
+                padding: 20px 15px;
+                margin-bottom: 15px;
+            }
