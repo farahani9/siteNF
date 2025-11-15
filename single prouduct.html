@@ -70,10 +70,6 @@
     </div>
   </nav>
  <!-- ================== prouduct ================== -->
- <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<link rel="stylesheet" href="css/style.css">
 
 <div class="container my-5">
     <div class="row">
@@ -342,24 +338,20 @@
         <!-- ستون سمت چپ: فرم نظرات -->
         <div class="col-lg-4 mb-4">
             <div class="product-card p-4">
-                <h3 class="mb-4 text-center" style="color: #2c3e50; border-bottom: 2px solid #A3B18A; padding-bottom: 10px;">
-</body>
-</html>
+                <h3 class="mb-4 text-center" style="color: #2c3e50; border-bottom: 2px solid #A3B18A; padding-bottom: 10px;"></h3>
 <!-- ==================ست پیشنهادی ================== -->
  <br>
  <br>
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-<link rel="stylesheet" href="css/style.css">
+ <br>
+ <br>
+
  <!-- بخش ست های پیشنهادی -->
 
                 <i class="bi bi-stars me-2" style="color: #A3B18A;"></i>
-                 ست های پیشنهادی   
+                ست های پیشنهادی   
             </h1>
             <p class="section-subtitle">پرطرفدارترین و پرفروش ترین ست های سترا</p>
         </div>
-
         <!-- اسلایدر محصولات -->
         <div id="bestSellerCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -368,10 +360,6 @@
        
     </div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
 <div class="container">
     <div class="centered-section">
         <div class="section-header">
@@ -556,6 +544,81 @@
     </div>
 </div>
 
+  <!-- ================== Footer ================== -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer class="footer text-dark pt-5 pb-3 position-relative full-width-footer">
+    <div class="footer-bg"></div>
+    <div class="container-fluid position-relative">
+        <div class="row gy-4 align-items-start">
+            
+            <!-- باکس پاسخگویی -->
+            <div class="col-md-4">
+                <div class="support-box text-center text-light p-4 shadow-lg">
+                    <h5 class="fw-bold mb-2">در سترا</h5>
+                    <p class="mb-3">پاسخگوی شما هستیم</p>
+                    <p class="fw-bold mb-1 fs-5">۰۹۳۹۳۸۹۶۰۶۲</p>
+                    <p class="fw-bold mb-3 fs-5">۰۲۱۶۶۲۸۱۳۳۲</p>
+                    <a href="#" class="btn btn-light px-4 py-2 rounded-pill">تماس با ما</a>
+                </div>
+            </div>
+
+            <!-- درباره -->
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3">درباره سترا</h5>
+                <p class="small text-muted">
+                    فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.
+                </p>
+                <p class="small mb-1 fw-bold">آدرس:</p>
+                <p class="small text-muted">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
+            </div>
+
+            <!-- خدمات -->
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3">خدمات و پشتیبانی</h5>
+                <ul class="list-unstyled small text-muted">
+                    <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
+                    <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
+                    <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
+                </ul>
+                <img src="img/enamad-one-star.png" alt="نماد اعتماد" style="height: 80px;">
+            </div>
+        </div>
+        
+        <!-- آیکون‌های شبکه‌های اجتماعی -->
+        <div class="mt-4 d-flex justify-content-center gap-3">
+            <a href="#"><img src="img/instagram.png" alt="اینستاگرام" style="width:30px; height:30px;"></a>
+            <a href="#"><img src="img/whatsapp.png" alt="واتساپ" style="width:30px; height:30px;"></a>
+            <a href="#"><img src="img/connection.png" alt="تلگرام" style="width:30px; height:30px;"></a>
+        </div>
+        
+        <hr class="my-4">
+        
+        <!-- کپی رایت -->
+        <div class="text-center small text-muted">
+            © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
+        </div>
+    </div>
+</footer>
+
+<script>
+    const priceRange = document.getElementById("priceRange");
+    const priceValue = document.getElementById("priceValue");
+
+    if (priceRange && priceValue) {
+        priceRange.oninput = function() {
+            priceValue.textContent = this.value;
+        };
+    }
+</script>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+  
