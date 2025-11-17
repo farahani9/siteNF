@@ -1,14 +1,14 @@
 /* ===================== فونت‌ها ===================== */
 @font-face {
     font-family: 'IranSansM';
-    src: url('../font/IRANSansX-Medium.woff') format('woff');
+    src: url('IRANSansX-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'IranSansB';
-    src: url('../font/IRANSansX-Bold.woff') format('woff');
+    src: url('IRANSansX-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -668,9 +668,8 @@ body {
             border: 2px solid #f1f3f4;
             position: relative;
         }
-
-/* ======================= فوتر ========================= */
-.footer {
+        /* استایل اختصاصی فوتر */
+       .footer {
             background-color: #FADADD; /* صورتی ملایم */
             color: #2f2f2f;
             overflow: hidden;
@@ -688,7 +687,7 @@ body {
             height: 100%;
             background-image: url('../img/1579.jpg'); /* پترن لباس */
             background-repeat: repeat;
-            background-size: 600px;
+            background-size: 800px;
             opacity: 0.07;
             pointer-events: none;
             z-index: 0;
