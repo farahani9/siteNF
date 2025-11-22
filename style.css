@@ -687,7 +687,7 @@ body {
             height: 100%;
             background-image: url('../img/1579.jpg'); /* پترن لباس */
             background-repeat: repeat;
-            background-size: 800px;
+            background-size: 600px;
             opacity: 0.07;
             pointer-events: none;
             z-index: 0;
@@ -695,7 +695,7 @@ body {
 
         /* باکس پاسخگویی */
         .support-box {
-            background-color: #dd2a47; 
+            background-color: #ffa0b0; 
             border-radius: 15px;
             position: relative;
             z-index: 2;
@@ -712,7 +712,7 @@ body {
         }
 
         .footer a:hover {
-            color: #dd2a47;
+            color: #fca8b6;
             transition: 0.3s;
         }
 
@@ -740,3 +740,96 @@ body {
             margin-left: calc(-50vw + 50%);
             margin-right: calc(-50vw + 50%);
         }
+        /*********  Form  *********/
+       :root{
+  --pink:#F6D6D9;
+  --olive:#8A9A5B;
+  --dark:#2E3036;
+  --beige:#E8D8C3;
+  --muted:#FBF9F7;
+  --radius:14px;
+}
+
+/* پایه */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:18px;background:linear-gradient(180deg,var(--muted),#fff);font-family:Vazir,system-ui;direction:rtl;color:var(--dark)}
+.page{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+
+/* بنر بالا */
+.banner{position:relative;height:140px;overflow:visible;border-radius:14px}
+.banner-shape{position:absolute;inset:0;width:100%;height:100%}
+.banner-text{position:absolute;right:28px;top:18px;color:var(--dark);text-align:right}
+.brand{font-size:32px;font-weight:800;letter-spacing:6px}
+.subtitle{color:var(--olive);font-weight:700;margin-top:6px;font-size:12px}
+
+/* کارت‌ها */
+.card{background:linear-gradient(180deg,#fff,#f8f6f4);border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(46,48,54,0.06)}
+.card-top{border:4px solid rgba(246,214,217,0.45)}
+.card-bottom{border:4px solid rgba(232,216,195,0.35)}
+
+/* گرید فرم */
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;align-items:start}
+.col-12{grid-column:span 12}
+.col-6{grid-column:span 6}
+
+/* لیبل و اینپوت */
+label{display:block;margin-bottom:8px;color:var(--olive);font-weight:800}
+.input-wrap{background:#fff;border-radius:12px;padding:10px;border:1px solid rgba(46,48,54,0.06)}
+input[type="text"], input[type="number"], textarea{
+  width:100%;padding:10px;border-radius:10px;border:1px solid rgba(46,48,54,0.04);font-size:14px;background:transparent;outline:none;direction:rtl
+}
+textarea{min-height:100px;resize:vertical}
+
+/* سوَچ‌ها */
+.swatches{display:flex;gap:12px;padding:6px}
+.swatch{width:44px;height:44px;border-radius:50%;border:2px solid rgba(46,48,54,0.06);cursor:pointer;box-shadow:0 10px 26px rgba(0,0,0,0.06);transition:all .14s}
+.swatch[data-value="gray"]{background:#d6d6d8}
+.swatch[data-value="olive"]{background:var(--olive)}
+.swatch[data-value="pink"]{background:var(--pink)}
+.swatch[data-value="beige"]{background:var(--beige)}
+.swatch.selected{transform:translateY(-6px);outline:4px solid rgba(46,48,54,0.06);box-shadow:0 24px 40px rgba(0,0,0,0.12)}
+
+/* چهره‌ها */
+.faces{display:flex;gap:12px;padding:6px}
+.face{width:86px;height:86px;border-radius:12px;border:1px solid rgba(46,48,54,0.06);background:#fff;padding:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;position:relative}
+.face .leaf{position:absolute;left:8px;top:8px;font-size:14px;opacity:0.9}
+.face-img{width:68px;height:68px;border-radius:8px}
+.face-img.f1{background:linear-gradient(180deg,#fbeee6,#f0c9b8)}
+.face-img.f2{background:linear-gradient(180deg,#f7e9d9,#dcb89a)}
+.face-img.f3{background:linear-gradient(180deg,#e7d7c5,#c39a78)}
+.face-img.f4{background:linear-gradient(180deg,#d8d2c8,#a57f63)}
+.face.selected{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,0,0,0.12)}
+
+/* فصل‌ها */
+.seasons{display:flex;gap:12px;padding:6px;flex-wrap:wrap}
+.season{flex:1 1 140px;background:var(--beige);border-radius:12px;padding:12px;text-align:center;border:1px solid rgba(46,48,54,0.04);cursor:pointer;transition:transform .12s}
+.season .icon{display:block;margin-top:8px;font-size:18px}
+.season.selected{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,0,0,0.12)}
+
+/* تناژ پوستی */
+.tones{display:flex;gap:12px;padding:6px}
+.tone{width:48px;height:48px;border-radius:50%;border:2px solid rgba(46,48,54,0.04);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.tone span{display:block;width:30px;height:30px;border-radius:50%}
+.tone[data-tone="light"] span{background:#F6E6DA}
+.tone[data-tone="medium"] span{background:#DAB89A}
+.tone[data-tone="dark"] span{background:#8B5A3C}
+.tone.selected{box-shadow:0 12px 30px rgba(0,0,0,0.12)}
+/* استایل‌ها */
+.styles{display:flex;gap:10px;flex-wrap:wrap;padding:6px}
+.style-chip{padding:8px 12px;border-radius:999px;border:1px solid rgba(46,48,54,0.06);background:#fff;cursor:pointer;font-weight:700;color:var(--dark);transition:all .12s}
+.style-chip.active{background:var(--olive);color:#fff;box-shadow:0 12px 30px rgba(138,154,91,0.12)}
+
+/* دکمه ارسال */
+.actions{display:flex;justify-content:center;padding-top:6px}
+.submit{background:linear-gradient(180deg,var(--olive),#6e7a43);color:#fff;padding:12px 28px;border-radius:12px;border:none;font-weight:800;cursor:pointer;box-shadow:0 12px 30px rgba(138,154,91,0.14)}
+
+/* حالت‌های فعال (تطبیق با تصویر) */
+.swatch.selected, .face.selected, .season.selected, .tone.selected, .style-chip.active{outline-offset:6px}
+
+/* واکنش‌پذیری */
+@media (max-width:900px){
+  .col-6{grid-column:span 12}
+  .faces{gap:10px}
+  .swatch{width:40px;height:40px}
+}
+        
