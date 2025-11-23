@@ -869,8 +869,8 @@ input[type="range"]::-moz-range-track {
 }
 
 .btn-add {
-  background-color: #d32038;
-  color: white;
+  background-color: #F6E6DA;
+  color: black;
   border: none;
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
@@ -882,7 +882,7 @@ input[type="range"]::-moz-range-track {
 .product-box {
   margin-top: 2rem;
   padding: 2rem 0;
-  background-color: #f3ead9;
+  background-color: #ccd8b7;
   border-radius: 10px;
   box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
@@ -904,6 +904,35 @@ input[type="range"]::-moz-range-track {
 
 .product-box select.form-select {
   width: 150px;
+}
+
+/* تب‌های غیرفعال صورتی */
+.nav-tabs .nav-link {
+    color: #000 ; 
+}
+
+/* تب فعال (انتخاب شده) ظاهری متفاوت داشته باشد */
+.nav-tabs .nav-link.active {
+    background-color: #d32038 ;
+    color: #fff ;
+    border-color: #d32038;
+}
+.size-text-link {
+  color: #d32038;          /* صورتی مطابق درخواست شما */
+  text-decoration: none;  
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.size-text-link:hover {
+  text-decoration: underline;
+}
+
+.ruler-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  vertical-align: middle;
 }
 
 
