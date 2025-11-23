@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="FatemehNarges">
   <title> فرم - سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg">
 
   <!-- Bootstrap -->
- <link href="CDN/css/bootstrap.rtl.min.css" rel="stylesheet">
+ <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 <link rel="stylesheet" href="css/style.css">
 
-
-
+</head>
+<body>
 
 <nav class="navbar navbar-expand-lg navbar-custom">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-         <img src="img/2.svg" alt="لوگوی فروشگاه" style="height:60px; width:auto;">
+         <img src="img/logo2.svg" alt="لوگوی فروشگاه" style="height:60px; width:auto;">
          <span class="text-black fw-bold">سترا</span>
       </a>
 
@@ -33,15 +34,16 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
             <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
               <li><a class="dropdown-item" href="#">لباس</a></li>
               <li><a class="dropdown-item" href="#">شلوار</a></li>
               <li><a class="dropdown-item" href="#">کیف</a></li>
               <li><a class="dropdown-item" href="#">شال / روسری</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#">درباره ما</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">تماس با ما</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
           <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
         </ul>
 
@@ -67,13 +69,12 @@
       </div>
     </div>
   </nav>
-</head>
   <!--    فرم ها      -->
-<body>
-  <main class="page">
+ <main class="page">
+  <section class="custom-widget">
     <!-- بالا: بنر -->
-    <header class="banner">
-      <svg class="banner-shape" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+    <header class="custom-widget__banner">
+      <svg class="custom-widget__banner-shape" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="bannerGrad" x1="0" x2="1">
             <stop offset="0" stop-color="#F6D6D9"/>
@@ -82,86 +83,150 @@
         </defs>
         <path d="M0,140 C200,40 1000,240 1200,80 L1200,0 L0,0 Z" fill="url(#bannerGrad)"/>
       </svg>
-      <div class="banner-text">
-        <div class="brand">سترا</div>
-        <div class="subtitle">دوست دارید استایل خودتان چگونه باشد</div>
+      <div class="custom-widget__banner-text">
+        <div class="custom-widget__brand">سترا</div>
+        <div class="custom-widget__subtitle">دوست دارید استایل خودتان چگونه باشد</div>
       </div>
     </header>
 
-    <!-- کارت اول: نام، سن، رنگ ها، چهره ها -->
-    <section class="card card-top">
-      <div class="grid">
-        <div class="col-6">
-          <label>نام</label>
-          <div class="input-wrap"><input id="firstName" type="text" placeholder=" نام" /></div>
-        </div>
-        <div class="col-6">
-          <label>نام خانوادگی</label>
-          <div class="input-wrap"><input id="lastName" type="text" placeholder=" نام خانوادگی" /></div>
-        </div>
-
-        <div class="col-12">
-          <label>سن</label>
-          <div class="input-wrap"><input id="age" type="number" min="1" max="120" placeholder=" سن خود را وارد کنید " /></div>
-        </div>
-
-        <div class="col-12">
-          <label class="section-title"> (رنگ مورد علاقه)</label>
-          <div class="swatches">
-            <button type="button" class="swatch" data-value="gray" title="Gray"></button>
-            <button type="button" class="swatch" data-value="olive" title="Olive"></button>
-            <button type="button" class="swatch" data-value="pink" title="Pink"></button>
-            <button type="button" class="swatch" data-value="beige" title="Beige"></button>
+    <!-- کارت اول: نام، سن، رنگ ها -->
+    <section class="custom-widget__card custom-widget__card--top">
+      <div class="custom-widget__grid">
+        <div class="custom-widget__col-6">
+          <label class="custom-widget__label">نام</label>
+          <div class="custom-widget__input-wrap">
+            <input class="custom-widget__input" id="firstName" type="text" placeholder="نام"/>
           </div>
         </div>
-
-    </section>
-
-    <!-- کارت دوم: فصل، تناژ پوستی، استایل ها، پیشنهاد، ارسال -->
-    <section class="card card-bottom">
-      <div class="grid">
-        <div class="col-12">
-          <label class="section-title">  ( لباس فصل مورد علاقه)</label>
-          <div class="seasons">
-           <button type="button" class="season" data-season="fall">پاییز<br><span class="icon">🍁</span></button>
-            <button type="button" class="season" data-season="winter">زمستان<br><span class="icon">❄️</span></button>
-            <button type="button" class="season" data-season="spring">بهار<br><span class="icon">🌸</span></button>
-            <button type="button" class="season" data-season="summer">تابستان<br><span class="icon">☀️</span></button>
+        <div class="custom-widget__col-6">
+          <label class="custom-widget__label">نام خانوادگی</label>
+          <div class="custom-widget__input-wrap">
+            <input class="custom-widget__input" id="lastName" type="text" placeholder="نام خانوادگی"/>
           </div>
         </div>
-
-        <div class="col-12">
-          <label class="section-title">تناژ پوستی شما</label>
-          <div class="tones">
-            <button type="button" class="tone" data-tone="light"><span></span></button>
-            <button type="button" class="tone" data-tone="medium"><span></span></button>
-            <button type="button" class="tone" data-tone="dark"><span></span></button>
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">سن</label>
+          <div class="custom-widget__input-wrap">
+            <input class="custom-widget__input" id="age" type="number" min="1" max="120" placeholder="سن خود را وارد کنید"/>
           </div>
         </div>
-        <div class="col-12">
-          <label class="section-title">استایل مورد علاقه</label>
-          <div class="styles">
-            <button type="button" class="style-chip" data-style="retro">رترو</button>
-            <button type="button" class="style-chip" data-style="classic">کلاسیک</button>
-            <button type="button" class="style-chip" data-style="tomboy">تامبوی</button>
-            <button type="button" class="style-chip" data-style="casual">کژوال</button>
-            <button type="button" class="style-chip" data-style="vintage">وینتیج</button>
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">رنگ مورد علاقه</label>
+          <div class="custom-widget__swatches">
+            <button type="button" class="custom-widget__swatch custom-widget__swatch--gray" data-value="gray" title="Gray"></button>
+            <button type="button" class="custom-widget__swatch custom-widget__swatch--olive" data-value="olive" title="Olive"></button>
+            <button type="button" class="custom-widget__swatch custom-widget__swatch--pink" data-value="pink" title="Pink"></button>
+            <button type="button" class="custom-widget__swatch custom-widget__swatch--beige" data-value="beige" title="Beige"></button>
           </div>
-        </div>
-
-        <div class="col-12">
-          <label class="section-title">پیشنهاد شما</label>
-          <div class="input-wrap"><textarea id="suggestion" placeholder="Please write your suggestion for us"></textarea></div>
-        </div>
-
-        <div class="col-12 actions">
-          <button type="button" id="submitBtn" class="submit">ارسال کنید</button>
         </div>
       </div>
     </section>
-  </main>
 
-  <script src="script.js"></script>
+    <!-- کارت دوم: فصل، تناژ پوستی، استایل ها، پیشنهاد، ارسال -->
+    <section class="custom-widget__card custom-widget__card--bottom">
+      <div class="custom-widget__grid">
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">لباس فصل مورد علاقه</label>
+          <div class="custom-widget__seasons">
+            <button type="button" class="custom-widget__season" data-season="fall">پاییز<br><span class="custom-widget__icon">🍁</span></button>
+            <button type="button" class="custom-widget__season" data-season="winter">زمستان<br><span class="custom-widget__icon">❄️</span></button>
+            <button type="button" class="custom-widget__season" data-season="spring">بهار<br><span class="custom-widget__icon">🌸</span></button>
+            <button type="button" class="custom-widget__season" data-season="summer">تابستان<br><span class="custom-widget__icon">☀️</span></button>
+          </div>
+        </div>
+
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">تناژ پوستی شما</label>
+          <div class="custom-widget__tones">
+            <button type="button" class="custom-widget__tone custom-widget__tone--light" data-tone="light"><span></span></button>
+            <button type="button" class="custom-widget__tone custom-widget__tone--medium" data-tone="medium"><span></span></button>
+            <button type="button" class="custom-widget__tone custom-widget__tone--dark" data-tone="dark"><span></span></button>
+          </div>
+        </div>
+
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">استایل مورد علاقه</label>
+          <div class="custom-widget__styles">
+            <button type="button" class="custom-widget__style-chip" data-style="retro">رترو</button>
+            <button type="button" class="custom-widget__style-chip" data-style="classic">کلاسیک</button>
+            <button type="button" class="custom-widget__style-chip" data-style="tomboy">تامبوی</button>
+            <button type="button" class="custom-widget__style-chip" data-style="casual">کژوال</button>
+            <button type="button" class="custom-widget__style-chip" data-style="vintage">وینتیج</button>
+          </div>
+        </div>
+
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">پیشنهاد شما</label>
+          <div class="custom-widget__input-wrap">
+            <textarea class="custom-widget__textarea" id="suggestion" placeholder="لطفاً پیشنهاد خود را بنویسید"></textarea>
+          </div>
+        </div>
+
+        <div class="custom-widget__col-12 custom-widget__actions">
+          <button type="button" id="submitBtn" class="custom-widget__submit">ارسال کنید</button>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+<!-- ================== فوتر ================== -->
+  <footer class="footer text-dark pt-5 pb-3 position-relative">
+    <div class="footer-bg"></div>
+
+    <div class="container position-relative">
+      <div class="row gy-4 align-items-start">
+
+        <!-- پشتیبانی -->
+        <div class="col-md-4">
+          <div class="support-box text-center text-dark p-4">
+            <h5 class="fw-bold mb-2">در سترا</h5>
+            <p class="mb-3">پاسخگوی شما هستیم</p>
+            <p class="fw-bold fs-5 mb-1">۰۹۳۹۳۸۹۶۰۶۲</p>
+            <p class="fw-bold fs-5 mb-3">۰۲۱۶۶۲۸۱۳۳۲</p>
+            <a href="Contact.html" class="btn btn-light px-4 py-2 rounded-pill">تماس با ما</a>
+          </div>
+        </div>
+
+        <!-- درباره -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">درباره سترا</h5>
+          <p class="small text-muted">
+            فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.
+          </p>
+
+          <p class="small mb-1 fw-bold">آدرس:</p>
+          <p class="small text-muted">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
+        </div>
+
+        <!-- خدمات -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">خدمات و پشتیبانی</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
+            <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
+            <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
+          </ul>
+
+          <img src="img/enamad-one-star.png" alt="نماد اعتماد" style="height:80px;">
+        </div>
+
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center gap-3">
+        <a href="#"><img src="img/instagram.png" style="width:30px;height:30px;"></a>
+        <a href="#"><img src="img/whatsapp.png" style="width:30px;height:30px;"></a>
+        <a href="#"><img src="img/connection.png" style="width:30px;height:30px;"></a>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="text-center small text-muted">
+        © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
+      </div>
+
+    </div>
+  </footer>
+
 <script>
 const qs = s => document.querySelector(s);
 const qsa = s => Array.from(document.querySelectorAll(s));
@@ -223,73 +288,9 @@ qs('#submitBtn').addEventListener('click', ()=>{
 });
 </script>
 
-  <!--footer  -->
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <footer class="footer text-dark pt-5 pb-3 position-relative full-width-footer">
-        <div class="footer-bg"></div>
-        <div class="container-fluid position-relative">
-            <div class="row gy-4 align-items-start">
-                
-                <!-- باکس پاسخگویی -->
-                <div class="col-md-4">
-                    <div class="support-box text-center text-light p-4 shadow-lg">
-                        <h5 class="fw-bold mb-2">در سترا</h5>
-                        <p class="mb-3">پاسخگوی شما هستیم</p>
-                        <p class="fw-bold mb-1 fs-5">۰۹۳۹۳۸۹۶۰۶۲</p>
-                        <p class="fw-bold mb-3 fs-5">۰۲۱۶۶۲۸۱۳۳۲</p>
-                        <a href="#" class="btn btn-light px-4 py-2 rounded-pill">تماس با ما</a>
-                    </div>
-                </div>
-
-                <!-- درباره -->
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">درباره سترا</h5>
-                    <p class="small text-muted">
-                        فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.
-                    </p>
-                    <p class="small mb-1 fw-bold">آدرس:</p>
-                    <p class="small text-muted">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
-                </div>
-
-                <!-- خدمات -->
-                <div class="col-md-4">
-                    <h5 class="fw-bold mb-3">خدمات و پشتیبانی</h5>
-                    <ul class="list-unstyled small text-muted">
-                        <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
-                        <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
-                        <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
-                    </ul>
-                    <div class="enamad-placeholder p-3 rounded" style="height: 80px; width: 80px;">
-                        <span class="small text-center">نماد اعتماد</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- آیکون‌های شبکه‌های اجتماعی -->
-            <div class="mt-4 d-flex justify-content-center gap-3 social-icons">
-                <a href="#"><i class="bi bi-instagram fs-5 text-dark"></i></a>
-                <a href="#"><i class="bi bi-whatsapp fs-5 text-dark"></i></a>
-                <a href="#"><i class="bi bi-telegram fs-5 text-dark"></i></a>
-            </div>
-            
-            <hr class="my-4">
-            
-            <!-- کپی رایت -->
-            <div class="text-center small text-muted">
-                © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
-            </div>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS -->
-   <script src="CDN/js/bootstrap.bundle.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
