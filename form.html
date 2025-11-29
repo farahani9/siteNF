@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="FatemehNarges">
+  <title> فرم - سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg">
+
+  <!-- Bootstrap -->
+ <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+         <img src="img/logo2.svg" alt="لوگوی فروشگاه" style="height:60px; width:auto;">
+         <span class="text-black fw-bold">سترا</span>
+      </a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
+        </ul>
+
+        <!-- باکس سرچ -->
+        <form class="d-flex mx-auto">
+          <div class="input-group search-box w-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img">
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید">
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="#" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!--    فرم ها      -->
+ <main class="page">
+  <section class="custom-widget">
+    <!-- بالا: بنر -->
+    <header class="custom-widget__banner">
+      <svg class="custom-widget__banner-shape" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="bannerGrad" x1="0" x2="1">
+            <stop offset="0" stop-color="#F6D6D9"/>
+            <stop offset="1" stop-color="#E8D8C3"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,140 C200,40 1000,240 1200,80 L1200,0 L0,0 Z" fill="url(#bannerGrad)"/>
+      </svg>
+      <div class="custom-widget__banner-text">
+        <div class="custom-widget__brand">سترا</div>
+        <div class="custom-widget__subtitle">دوست دارید استایل خودتان چگونه باشد</div>
+      </div>
+    </header>
+
+    <!-- کارت اول: نام، سن، رنگ ها -->
+    <section class="custom-widget__card custom-widget__card--top">
+      <div class="custom-widget__grid">
+        <div class="custom-widget__col-6">
+          <label class="custom-widget__label">نام</label>
+          <div class="custom-widget__input-wrap">
+            <input class="custom-widget__input" id="firstName" type="text" placeholder="نام"/>
+          </div>
+        </div>
+        <div class="custom-widget__col-6">
+          <label class="custom-widget__label">نام خانوادگی</label>
+          <div class="custom-widget__input-wrap">
+            <input class="custom-widget__input" id="lastName" type="text" placeholder="نام خانوادگی"/>
+          </div>
+        </div>
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">سن</label>
+          <div class="custom-widget__input-wrap">
+            <input class="custom-widget__input" id="age" type="number" min="1" max="120" placeholder="سن خود را وارد کنید"/>
+          </div>
+        </div>
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">رنگ مورد علاقه</label>
+          <div class="custom-widget__swatches">
+            <button type="button" class="custom-widget__swatch custom-widget__swatch--gray" data-value="gray" title="Gray"></button>
+            <button type="button" class="custom-widget__swatch custom-widget__swatch--olive" data-value="olive" title="Olive"></button>
+            <button type="button" class="custom-widget__swatch custom-widget__swatch--pink" data-value="pink" title="Pink"></button>
+            <button type="button" class="custom-widget__swatch custom-widget__swatch--beige" data-value="beige" title="Beige"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- کارت دوم: فصل، تناژ پوستی، استایل ها، پیشنهاد، ارسال -->
+    <section class="custom-widget__card custom-widget__card--bottom">
+      <div class="custom-widget__grid">
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">لباس فصل مورد علاقه</label>
+          <div class="custom-widget__seasons">
+            <button type="button" class="custom-widget__season" data-season="fall">پاییز<br><span class="custom-widget__icon">🍁</span></button>
+            <button type="button" class="custom-widget__season" data-season="winter">زمستان<br><span class="custom-widget__icon">❄️</span></button>
+            <button type="button" class="custom-widget__season" data-season="spring">بهار<br><span class="custom-widget__icon">🌸</span></button>
+            <button type="button" class="custom-widget__season" data-season="summer">تابستان<br><span class="custom-widget__icon">☀️</span></button>
+          </div>
+        </div>
+
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">تناژ پوستی شما</label>
+          <div class="custom-widget__tones">
+            <button type="button" class="custom-widget__tone custom-widget__tone--light" data-tone="light"><span></span></button>
+            <button type="button" class="custom-widget__tone custom-widget__tone--medium" data-tone="medium"><span></span></button>
+            <button type="button" class="custom-widget__tone custom-widget__tone--dark" data-tone="dark"><span></span></button>
+          </div>
+        </div>
+
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">استایل مورد علاقه</label>
+          <div class="custom-widget__styles">
+            <button type="button" class="custom-widget__style-chip" data-style="retro">رترو</button>
+            <button type="button" class="custom-widget__style-chip" data-style="classic">کلاسیک</button>
+            <button type="button" class="custom-widget__style-chip" data-style="tomboy">تامبوی</button>
+            <button type="button" class="custom-widget__style-chip" data-style="casual">کژوال</button>
+            <button type="button" class="custom-widget__style-chip" data-style="vintage">وینتیج</button>
+          </div>
+        </div>
+
+        <div class="custom-widget__col-12">
+          <label class="custom-widget__label">پیشنهاد شما</label>
+          <div class="custom-widget__input-wrap">
+            <textarea class="custom-widget__textarea" id="suggestion" placeholder="لطفاً پیشنهاد خود را بنویسید"></textarea>
+          </div>
+        </div>
+
+        <div class="custom-widget__col-12 custom-widget__actions">
+          <button type="button" id="submitBtn" class="custom-widget__submit">ارسال کنید</button>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
+<!-- ================== فوتر ================== -->
+  <footer class="footer text-dark pt-5 pb-3 position-relative">
+    <div class="footer-bg"></div>
+
+    <div class="container position-relative">
+      <div class="row gy-4 align-items-start">
+
+        <!-- پشتیبانی -->
+        <div class="col-md-4">
+          <div class="support-box text-center text-dark p-4">
+            <h5 class="fw-bold mb-2">در سترا</h5>
+            <p class="mb-3">پاسخگوی شما هستیم</p>
+            <p class="fw-bold fs-5 mb-1">۰۹۳۹۳۸۹۶۰۶۲</p>
+            <p class="fw-bold fs-5 mb-3">۰۲۱۶۶۲۸۱۳۳۲</p>
+            <a href="Contact.html" class="btn btn-light px-4 py-2 rounded-pill">تماس با ما</a>
+          </div>
+        </div>
+
+        <!-- درباره -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">درباره سترا</h5>
+          <p class="small text-muted">
+            فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.
+          </p>
+
+          <p class="small mb-1 fw-bold">آدرس:</p>
+          <p class="small text-muted">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
+        </div>
+
+        <!-- خدمات -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">خدمات و پشتیبانی</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
+            <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
+            <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
+          </ul>
+
+          <img src="img/enamad-one-star.png" alt="نماد اعتماد" style="height:80px;">
+        </div>
+
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center gap-3">
+        <a href="#"><img src="img/instagram.png" style="width:30px;height:30px;"></a>
+        <a href="#"><img src="img/whatsapp.png" style="width:30px;height:30px;"></a>
+        <a href="#"><img src="img/connection.png" style="width:30px;height:30px;"></a>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="text-center small text-muted">
+        © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
+      </div>
+
+    </div>
+  </footer>
+
+<script>
+const qs = s => document.querySelector(s);
+const qsa = s => Array.from(document.querySelectorAll(s));
+
+/* single-select swatches */
+qsa('.swatch').forEach(el=>{
+  el.addEventListener('click', ()=> {
+    qsa('.swatch').forEach(x=>x.classList.remove('selected'));
+    el.classList.add('selected');
+  });
+});
+
+/* faces single-select */
+qsa('.face').forEach(el=>{
+  el.addEventListener('click', ()=> {
+    qsa('.face').forEach(x=>x.classList.remove('selected'));
+    el.classList.add('selected');
+  });
+});
+
+/* seasons single-select */
+qsa('.season').forEach(el=>{
+  el.addEventListener('click', ()=> {
+    qsa('.season').forEach(x=>x.classList.remove('selected'));
+    el.classList.add('selected');
+  });
+});
+
+/* tones single-select */
+qsa('.tone').forEach(el=>{
+  el.addEventListener('click', ()=> {
+    qsa('.tone').forEach(x=>x.classList.remove('selected'));
+    el.classList.add('selected');
+  });
+});
+
+/* styles multi-select */
+qsa('.style-chip').forEach(el=>{
+  el.addEventListener('click', ()=> {
+    el.classList.toggle('active');
+  });
+});
+
+/* submit */
+qs('#submitBtn').addEventListener('click', ()=>{
+  const data = {
+    firstName: qs('#firstName').value.trim(),
+    lastName: qs('#lastName').value.trim(),
+    age: qs('#age').value.trim(),
+    color: qsa('.swatch.selected')[0]?.dataset.value || null,
+    face: qsa('.face.selected')[0]?.dataset.face || null,
+    season: qsa('.season.selected')[0]?.dataset.season || null,
+    tone: qsa('.tone.selected')[0]?.dataset.tone || null,
+    styles: qsa('.style-chip.active').map(e=>e.dataset.style),
+    suggestion: qs('#suggestion')?.value.trim() || ''
+  };
+  console.log('setra form data:', data);
+  alert('مرسی! پاسخ شما ثبت شد. (برای توسعه: ارسال به سرور اضافه شود)');
+});
+</script>
+
+
+    <!-- Bootstrap JS -->
+   <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

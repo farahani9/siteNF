@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="FatemehArabkhorasani">
+  <title>صفحه ورود - سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+
+      <!-- لوگو -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" style="height:60px; width:auto;">
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <!-- دکمه منو موبایل -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- محتوای منو -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+              <li><a class="dropdown-item" href="#">کفش</a></li>
+              <li><a class="dropdown-item" href="#">عینک</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
+        </ul>
+
+        <!-- باکس جستجو -->
+        <form class="d-flex mx-auto">
+          <div class="input-group search-box w-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img">
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید">
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="#" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================== Login Form ================== -->
+  <div class="login-container">
+    <div class="login-card login-box" role="main" aria-labelledby="loginTitle">
+
+      <div class="login-left">
+        <h1 id="loginTitle" class="login-brand-title">ورود به حساب کاربری سترا</h1>
+        <p class="login-brand-sub">خوش آمدید — با ایمیل یا شماره موبایل وارد شوید</p>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <!-- ایمیل یا موبایل -->
+          <label for="identity" class="login-label">ایمیل یا شماره موبایل</label>
+          <input id="identity" name="identity" class="login-input" type="text" placeholder="example@domain.com یا 0912xxxxxxx" required aria-required="true">
+
+          <!-- رمز عبور -->
+          <label for="password" class="login-label">رمز عبور</label>
+          <div style="position:relative">
+            <input id="password" name="password" class="login-input" type="password" placeholder="رمز عبور" required aria-required="true" style="padding-right:44px">
+            <button type="button" id="togglePwd" aria-label="نمایش/مخفی کردن رمز"
+              style="position:absolute;right:8px;top:50%;transform:translateY(-50%);
+                     background:none;border:0;cursor:pointer;font-size:18px;color:var(--login-muted)">
+              <i class="bi bi-eye" id="eyeIcon"></i>
+            </button>
+          </div>
+
+          <!-- گزینه‌ها -->
+          <div class="login-row">
+            <label class="login-checkbox"><input type="checkbox" id="remember"> مرا به خاطر بسپار</label>
+            <a class="login-link login-small" href="forget.html">رمز عبور را فراموش کرده‌اید؟</a>
+          </div>
+
+          <!-- خطا -->
+          <div id="formError" class="login-error" role="alert" aria-live="assertive" style="display:none"></div>
+
+          <!-- دکمه ورود -->
+          <button class="login-btn" type="submit">ورود به حساب</button>
+
+          <p class="login-small" style="margin-top:12px">حساب ندارید؟ <a class="login-link" href="#">ثبت‌نام کنید</a></p>
+        </form>
+      </div>
+
+      <!-- سمت راست تزئینی -->
+      <div class="login-right" aria-hidden="true">
+        <div style="text-align: center;">
+          <div style="width: 200px; height: 200px; background: linear-gradient(135deg, #ff8a65, #ff5f6d); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="bi bi-person-check" style="font-size: 80px; color: white;"></i>
+          </div>
+          <h3 style="color: #2B2B2B; margin-bottom: 10px;">سترا</h3>
+          <p style="color: #7A6A66;">تجربه خریدی متفاوت و خاص</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================== Footer ================== -->
+  <footer class="footer text-dark pt-5 pb-3 position-relative">
+    <div class="footer-bg"></div>
+    <div class="container position-relative">
+      <div class="row gy-4 align-items-start">
+
+        <!-- پشتیبانی -->
+        <div class="col-md-4">
+          <div class="support-box text-center text-dark p-4">
+            <h5 class="fw-bold mb-2">در سترا</h5>
+            <p class="mb-3">پاسخگوی شما هستیم</p>
+            <p class="fw-bold fs-5 mb-1">۰۹۳۹۳۸۹۶۰۶۲</p>
+            <p class="fw-bold fs-5 mb-3">۰۲۱۶۶۲۸۱۳۳۲</p>
+            <a href="Contact.html" class="btn btn-light px-4 py-2 rounded-pill">تماس با ما</a>
+          </div>
+        </div>
+
+        <!-- درباره -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">درباره سترا</h5>
+          <p class="small text-muted">
+            فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.
+          </p>
+          <p class="small mb-1 fw-bold">آدرس:</p>
+          <p class="small text-muted">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
+        </div>
+
+        <!-- خدمات -->
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">خدمات و پشتیبانی</h5>
+          <ul class="list-unstyled small text-muted">
+            <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
+            <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
+            <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
+          </ul>
+          <img src="img/enamad-one-star.png" alt="نماد اعتماد" style="height:80px;">
+        </div>
+
+      </div>
+
+      <div class="mt-4 d-flex justify-content-center gap-3">
+        <a href="#"><img src="img/instagram.png" style="width:30px;height:30px;"></a>
+        <a href="#"><img src="img/whatsapp.png" style="width:30px;height:30px;"></a>
+        <a href="#"><img src="img/connection.png" style="width:30px;height:30px;"></a>
+      </div>
+
+      <hr class="my-4">
+
+      <div class="text-center small text-muted">
+        © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================== Scripts ================== -->
+  <script>
+    const togglePwd = document.getElementById('togglePwd');
+    const password = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    togglePwd.addEventListener('click', () => {
+      if (password.type === "password") {
+        password.type = "text";
+        eyeIcon.classList.remove('bi-eye');
+        eyeIcon.classList.add('bi-eye-slash');
+      } else {
+        password.type = "password";
+        eyeIcon.classList.remove('bi-eye-slash');
+        eyeIcon.classList.add('bi-eye');
+      }
+    });
+  </script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
