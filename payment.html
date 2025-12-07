@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="NargessFarahani">
+  <title>صفحه پرداخت - سترا</title>
+
+  <!-- Bootstrap -->
+ <link href="CDN/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+   <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+
+      <!-- لوگو -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" style="height:60px; width:auto;">
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <!-- دکمه منو موبایل -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- محتوای منو -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+              <li><a class="dropdown-item" href="#">کفش</a></li>
+              <li><a class="dropdown-item" href="#">عینک</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
+        </ul>
+
+        <!-- باکس جستجو -->
+        <form class="d-flex mx-auto">
+          <div class="input-group search-box w-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img">
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید">
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="#" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+<!-- ================== صفحه اصلی ================== -->
+<style>
+        :root {
+            --peyment-primary: #2e5bff;
+            --peyment-primary-dark: #1e4bd1;
+            --peyment-secondary: #7c8fff;
+            --peyment-success: #00c851;
+            --peyment-danger: #ff4444;
+            --peyment-warning: #ffbb33;
+            --peyment-dark: #2e384d;
+            --peyment-light: #f8f9fa;
+            --peyment-gray: #8798ad;
+            --peyment-border: #e0e7ff;
+            --peyment-shadow: rgba(46, 91, 255, 0.1);
+            --peyment-radius: 12px;
+            --peyment-transition: all 0.3s ease;
+        }
+
+
+        .peyment-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .peyment-container {
+            width: 100%;
+            max-width: 500px;
+            background-color: white;
+            border-radius: var(--peyment-radius);
+            box-shadow: 0 15px 40px rgba(46, 91, 255, 0.15);
+            overflow: hidden;
+            animation: peymentFadeIn 0.6s ease-out;
+            /* افزودن انیمیشن ظاهر شدن */
+        }
+
+        @keyframes peymentFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .peyment-header {
+            background: linear-gradient(to left, var(--peyment-primary), var(--peyment-secondary));
+            color: white;
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .peyment-header h1 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .peyment-header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .peyment-logo {
+            font-weight: 700;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .peyment-secure {
+            position: absolute;
+            left: 25px;
+            top: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .peyment-content {
+            padding: 30px 25px;
+        }
+
+        .peyment-section {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--peyment-border);
+        }
+
+        .peyment-section:last-of-type {
+            border-bottom: none;
+        }
+        .peyment-section-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--peyment-primary);
+        }
+
+        .peyment-section-title i {
+            font-size: 1.3rem;
+        }
+
+        .peyment-amount {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--peyment-light);
+            padding: 25px;
+            border-radius: var(--peyment-radius);
+            margin-bottom: 20px;
+            border: 1px solid var(--peyment-border);
+        }
+
+        .peyment-amount-label {
+            font-size: 1.05rem;
+            color: var(--peyment-gray);
+        }
+
+        .peyment-amount-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--peyment-primary);
+            direction: ltr;
+            /* برای نمایش صحیح اعداد */
+        }
+
+        .peyment-amount-currency {
+            font-size: 1.3rem;
+            color: var(--peyment-gray);
+            margin-right: 5px;
+        }
+
+        .peyment-form-group {
+            margin-bottom: 25px;
+        }
+
+        .peyment-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .peyment-input {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid var(--peyment-border);
+            border-radius: var(--peyment-radius);
+            font-size: 1rem;
+            transition: var(--peyment-transition);
+            background-color: white;
+            color: var(--peyment-dark);
+        }
+
+        .peyment-input:focus {
+            outline: none;
+            border-color: var(--peyment-primary);
+            box-shadow: 0 0 0 3px var(--peyment-shadow);
+        }
+
+        .peyment-input-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .peyment-input-col {
+            flex: 1;
+        }
+
+        .peyment-card-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .peyment-card-icon {
+            width: 55px;
+            height: 40px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--peyment-light);
+            color: var(--peyment-gray);
+            font-size: 1.6rem;
+            cursor: pointer;
+            transition: var(--peyment-transition);
+        }
+
+        .peyment-card-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .peyment-card-icon.active {
+            background-color: var(--peyment-primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(46, 91, 255, 0.3);
+        }
+
+        .peyment-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .peyment-checkbox input {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--peyment-primary);
+        }
+
+        .peyment-checkbox label {
+            font-size: 0.95rem;
+            color: var(--peyment-gray);
+            cursor: pointer;
+        }
+
+        .peyment-checkbox a {
+            color: var(--peyment-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .peyment-checkbox a:hover {
+            text-decoration: underline;
+        }
+
+        .peyment-button {
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to left, var(--peyment-primary), var(--peyment-secondary));
+            color: white;
+            border: none;
+            border-radius: var(--peyment-radius);
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--peyment-transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .peyment-button:hover:not(:disabled) {
+            background: linear-gradient(to left, var(--peyment-primary-dark), var(--peyment-primary));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--peyment-shadow);
+        }
+
+        .peyment-button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .peyment-button:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .peyment-button i {
+            font-size: 1.3rem;
+        }
+
+
+        .peyment-alert {
+            padding: 20px;
+            border-radius: var(--peyment-radius);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background-color: rgba(255, 187, 51, 0.1);
+            border-right: 4px solid var(--peyment-warning);
+            animation: peymentAlertPulse 2s infinite;
+        }
+
+        @keyframes peymentAlertPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 187, 51, 0.3);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 187, 51, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 187, 51, 0);
+            }
+        }
+
+        .peyment-alert i {
+            color: var(--peyment-warning);
+            font-size: 1.3rem;
+            margin-top: 2px;
+        }
+
+        .peyment-alert-content {
+            flex: 1;
+        }
+
+        .peyment-alert.success {
+            background-color: rgba(0, 200, 81, 0.1);
+            border-right-color: var(--peyment-success);
+            animation: none;
+        }
+
+        .peyment-alert.success i {
+            color: var(--peyment-success);
+        }
+
+        /* استایل‌های ریسپانسیو */
+        @media (max-width: 576px) {
+            body {
+                padding: 15px;
+            }
+            
+            .peyment-container {
+                border-radius: 10px;
+            }
+            
+            .peyment-header {
+                padding: 25px 20px;
+            }
+            
+            .peyment-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .peyment-content {
+                padding: 25px 20px;
+            }
+            
+            .peyment-input-row {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .peyment-amount-value {
+                font-size: 1.7rem;
+            }
+            
+            .peyment-secure {
+                position: relative;
+                left: 0;
+                top: 0;
+                justify-content: center;
+                margin-top: 15px;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .peyment-card-icons {
+                justify-content: center;
+            }
+        }
+        @media (max-width: 380px) {
+            .peyment-card-icons {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            
+            .peyment-header h1 {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        /* استایل برای نمایش در مرکز صفحه */
+        .peyment-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="peyment-wrapper">
+        <div class="peyment-container">
+            <div class="peyment-header">
+                <div class="peyment-logo">سترا</div>
+                <h1><i class="fas fa-lock"></i> پرداخت امن زرین پال </h1>
+                <p>اطلاعات پرداخت خود را با خیال راحت وارد کنید</p>
+                <div class="peyment-secure">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>امنیت تضمین شده</span>
+                </div>
+            </div>
+            
+            <div class="peyment-content">
+                <div class="peyment-alert" id="paymentAlert">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <div class="peyment-alert-content">
+                        پرداخت شما با موفقیت در حال انجام است. لطفا اطلاعات کارت خود را وارد کنید.
+                    </div>
+                </div>
+                
+                <div class="peyment-section">
+                    <div class="peyment-amount">
+                        <div class="peyment-amount-label">مبلغ قابل پرداخت:</div>
+                        <div class="peyment-amount-value">
+                            <span class="peyment-amount-currency">تومان</span>
+                            ۵۸۸,۰۰۰
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="peyment-section">
+                    <div class="peyment-section-title">
+                        <i class="far fa-credit-card"></i>
+                        <span>اطلاعات کارت بانکی</span>
+                    </div>
+                    
+                    <div class="peyment-form-group">
+                        <label class="peyment-label">شماره کارت</label>
+                        <input type="text" class="peyment-input" id="cardNumber" placeholder="۱۲۳۴ ۵۶۷۸ ۹۰۱۲ ۳۴۵۶" maxlength="19" inputmode="numeric">
+                    </div>
+                    
+                    <div class="peyment-input-row">
+                        <div class="peyment-input-col">
+                            <label class="peyment-label">تاریخ انقضا</label>
+                            <input type="text" class="peyment-input" id="expiryDate" placeholder="ماه/سال" maxlength="7">
+                        </div>
+                        <div class="peyment-input-col">
+                            <label class="peyment-label">کد CVV2</label>
+                            <input type="password" class="peyment-input" id="cvvCode" placeholder="۱۲۳" maxlength="4" inputmode="numeric">
+                        </div>
+                    </div>
+                    
+                    <div class="peyment-form-group">
+                        <label class="peyment-label">نام دارنده کارت</label>
+                        <input type="text" class="peyment-input" id="cardHolder" placeholder="به فارسی وارد کنید">
+                    </div>
+                    
+                    <div class="peyment-card-icons">
+                        <label class="peyment-label">دریافت رمز پویا</label>
+                        <div class="peyment-card-icon active" data-card="mastercard">
+                            <i class="fab fa-cc-mastercard"></i>
+                        </div>
+                        <div class="peyment-card-icon" data-card="visa">
+                            <i class="fab fa-cc-visa"></i>
+                        </div>
+                        <div class="peyment-card-icon" data-card="local">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="peyment-card-icon" data-card="paypal">
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="peyment-section">
+                    <div class="peyment-section-title">
+                        <i class="fas fa-user-circle"></i>
+                        <span>اطلاعات پرداخت کننده</span>
+                    </div>
+                    
+                    <div class="peyment-form-group">
+                        <label class="peyment-label">شماره همراه</label>
+                        <input type="tel" class="peyment-input" id="phoneNumber" placeholder="۰۹۱۲۳۴۵۶۷۸۹" value="۰۹۱۲۳۴۵۶۷۸۹" inputmode="numeric">
+                    </div>
+                    
+                    <div class="peyment-form-group">
+                        <label class="peyment-label">ایمیل (اختیاری)</label>
+                        <input type="email" class="peyment-input" id="emailAddress" placeholder="example@domain.com">
+                    </div>
+                    
+                    <div class="peyment-checkbox">
+                        <input type="checkbox" id="saveCard" checked>
+                        <label for="saveCard">ذخیره اطلاعات کارت برای پرداخت‌های بعدی</label>
+                    </div>
+                    
+                    <div class="peyment-checkbox">
+                        <input type="checkbox" id="terms" checked>
+                        <label for="terms">با <a href="#" id="termsLink">قوانین و مقررات</a> پرداخت موافقم</label>
+                    </div>
+                </div>
+                
+                <button class="peyment-button" id="payButton">
+                    <i class="fas fa-lock"></i>
+                    پرداخت و تکمیل خرید
+                </button>
+            </div>
+            
+            <div class="peyment-footer">
+                <p>تمامی اطلاعات شما به صورت رمزنگاری شده منتقل می‌شود و نزد ما محفوظ است.</p>
+                <p>در صورت بروز مشکل با <a href="#" id="supportLink">پشتیبانی سترا</a> تماس بگیرید.</p>
+            </div>
+        </div>
+    </div>
+
+ 
+            <!-- Bootstrap JS -->
+     <script src="CDN/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
