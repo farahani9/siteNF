@@ -1,198 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>داشبورد مدیریت فروشگاه - سترا</title>
-  <link rel="icon" type="image/svg" href="img/favicon.svg">
-
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-  <!-- ================== Navbar ================== -->
-  <nav class="navbar navbar-expand-lg navbar-custom">
-    <div class="container-fluid">
-
-      <!-- لوگو -->
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <img src="img/logo2.svg" alt="لوگوی فروشگاه" style="height:60px; width:auto;">
-        <span class="text-black fw-bold">سترا</span>
-      </a>
-
-      <!-- دکمه منو موبایل -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- محتوای منو -->
-      <div class="collapse navbar-collapse" id="navbarContent">
-
-        <!-- منو وسط -->
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">خانه</a></li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">محصولات</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
-              <li><a class="dropdown-item" href="#">لباس</a></li>
-              <li><a class="dropdown-item" href="#">شلوار</a></li>
-              <li><a class="dropdown-item" href="#">کیف</a></li>
-              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
-              <li><a class="dropdown-item" href="#">کفش</a></li>
-              <li><a class="dropdown-item" href="#">عینک</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
-          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
-        </ul>
-
-        <!-- باکس جستجو -->
-        <form class="d-flex mx-auto">
-          <div class="input-group search-box w-auto p-1">
-            <span class="input-group-text">
-              <img src="img/search-black.svg" alt="search" class="search-icon-img">
-            </span>
-            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید">
-          </div>
-        </form>
-
-        <!-- دکمه‌های سمت راست -->
-        <div class="d-flex">
-          <a href="login.html" class="btn btn-icon me-2">
-            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
-          </a>
-          <a href="#" class="btn-cart me-2">
-            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </nav>
-
-
-<!-- صفحه داشبورد -->
-<div class="dashboard-wrapper d-flex">
-
-  <!-- Sidebar -->
-  <aside class="sidebar-management">
-    <h4 class="text-center mb-3 text-light">مدیریت فروشگاه</h4>
-
-    <nav class="nav flex-column">
-      <a class="nav-link active" href="admin-dashboard.html"><i class="bi bi-speedometer2"></i> داشبورد</a>
-      <a class="nav-link" href="profile-dashboard.html"><i class="bi bi-person-circle"></i> پروفایل</a>
-      <a class="nav-link" href="admin-dashboard-prodouct.html"><i class="bi bi-box-seam"></i> محصولات</a>
-      <a class="nav-link" href="write.html"><i class="bi bi-pencil-square"></i> نوشته‌ها</a>
-      <a class="nav-link" href="#"><i class="bi bi-people"></i> کاربران</a>
-      <a class="nav-link" href="#"><i class="bi bi-chat-dots"></i> پیام‌ها</a>
-      <a class="nav-link" href="#"><i class="bi bi-gear"></i> تنظیمات</a>
-      <a class="nav-link" href="#"><i class="bi bi-star"></i> امتیازها</a>
-      <a class="nav-link text-danger" href="#"><i class="bi bi-box-arrow-right"></i> خروج</a>
-    </nav>
-  </aside>
-
-
-  <!-- Main Content -->
-  <main class="main-content">
-
-    <!-- خوش آمدید -->
-    <div class="welcome-box">
-      <h2>سلام خوش آمدید!</h2>
-      <p>وضعیت کلی فروشگاه امروز را می‌تونی اینجا مشاهده کنی.</p>
-    </div>
-
-    <!-- آمار بالا -->
-    <div class="row mt-4">
-
-      <div class="col-md-3">
-        <div class="stat-box pastel-blue">
-          <h4>210</h4>
-          <p>تعداد محصولات</p>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="stat-box pastel-green">
-          <h4>1,350</h4>
-          <p>کاربران فعال</p>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="stat-box pastel-orange">
-          <h4>87</h4>
-          <p>سفارش‌های امروز</p>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="stat-box pastel-purple">
-          <h4>8,750,000 تومان</h4>
-          <p>درآمد امروز</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- کارت‌های پایین -->
-    <div class="row mt-5">
-
-      <div class="col-md-4">
-        <div class="dashboard-box">
-          <h5>مدیریت محصولات 📦</h5>
-          <p class="text-muted">افزودن، ویرایش و حذف محصولات</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="dashboard-box">
-          <h5>نوشته‌ها ✏️</h5>
-          <p class="text-muted">مدیریت مقالات و محتوا</p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="dashboard-box">
-          <h5>کاربران 👥</h5>
-          <p class="text-muted">مدیریت کاربران و پیام‌ها</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mt-3">
-        <div class="dashboard-box">
-          <h5>تنظیمات ⚙️</h5>
-          <p class="text-muted">تنظیمات اصلی فروشگاه</p>
-        </div>
-      </div>
-
-      <div class="col-md-4 mt-3">
-        <div class="dashboard-box">
-          <h5>امتیازها ⭐</h5>
-          <p class="text-muted">نمایش و مدیریت امتیاز کاربران</p>
-        </div>
-      </div>
-
-    </div>
-
-  </main>
-
-</div>
-
-
-<!-- Footer -->
-<footer class="footer-admin">
-  © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
-</footer>
-
-<script src="js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
