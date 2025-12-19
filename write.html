@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مدیریت نوشته‌ها - سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/aos.css">
+
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" class="img-fluid" style="height: 60px; width: auto"/>
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-lg-start">
+          <li class="nav-item"><a class="nav-link" href="main-page.html">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">اعتماد شما</a></li>
+        </ul>
+
+        <!-- سرچ -->
+        <form class="d-flex my-2 my-lg-0 me-4">
+          <div class="input-group search-box w-100 w-lg-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img" />
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید" />
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex mt-2 mt-lg-0">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="#" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- صفحه مدیریت نوشته -->
+<div class="container-fluid mt-5">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <aside class="col-12 col-lg-3 mb-3 mb-lg-0">
+      <div class="sidebar-management p-3">
+        <h4 class="text-center mb-3 text-light">مدیریت فروشگاه</h4>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="admin-dashboard.html"><i class="bi bi-speedometer2"></i> داشبورد</a>
+          <a class="nav-link" href="profile-dashboard.html"><i class="bi bi-person-circle"></i> پروفایل</a>
+          <a class="nav-link" href="admin-dashboard-prodouct.html"><i class="bi bi-box-seam"></i> محصولات</a>
+          <a class="nav-link active" href="write.html"><i class="bi bi-pencil-square"></i> نوشته‌ها</a>
+          <a class="nav-link" href="users-dashboard.html"><i class="bi bi-people"></i> کاربران</a>
+          <a class="nav-link" href="#"><i class="bi bi-chat-dots"></i> پیام‌ها</a>
+          <a class="nav-link" href="#"><i class="bi bi-gear"></i> تنظیمات</a>
+          <a class="nav-link" href="#"><i class="bi bi-star"></i> امتیازها</a>
+          <a class="nav-link text-danger" href="#"><i class="bi bi-box-arrow-right"></i> خروج</a>
+        </nav>
+      </div>
+    </aside>
+
+
+  <!-- Main Content -->
+  <main class="col-12 col-lg-9">
+    <h2 class="mb-4">مدیریت نوشته‌ها</h2>
+    <p class="text-muted">در این صفحه می‌توانید نوشته‌ها را اضافه، ویرایش یا حذف کنید.</p>
+
+    <button class="btn btn-primary mb-3" id="addPostBtn">
+      <i class="bi bi-plus-circle"></i> افزودن نوشته
+    </button>
+
+    <div class="table-wrapper">
+      <table class="table table-bordered table-striped" id="postTable">
+        <thead class="table-light">
+          <tr>
+            <th>شناسه</th>
+            <th>عنوان</th>
+            <th>توضیح کوتاه</th>
+            <th>تاریخ</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+</div>
+
+<!-- Modal افزودن/ویرایش نوشته -->
+<div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="postModalLabel">افزودن نوشته</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="postForm">
+          <input type="hidden" id="postId">
+          <div class="mb-3">
+            <label for="postTitle" class="form-label">عنوان</label>
+            <input type="text" class="form-control" id="postTitle" required>
+          </div>
+          <div class="mb-3">
+            <label for="postExcerpt" class="form-label">توضیح کوتاه</label>
+            <textarea class="form-control" id="postExcerpt" rows="3" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="postDate" class="form-label">تاریخ</label>
+            <input type="date" class="form-control" id="postDate" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100">ذخیره</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer-admin mt-4 text-center p-3 ">
+  © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+const posts = [];
+let editIndex = null;
+
+const postTableBody = document.querySelector('#postTable tbody');
+const addPostBtn = document.getElementById('addPostBtn');
+const postModal = new bootstrap.Modal(document.getElementById('postModal'));
+const postForm = document.getElementById('postForm');
+
+addPostBtn.addEventListener('click', () => {
+  editIndex = null;
+  document.getElementById('postModalLabel').innerText = 'افزودن نوشته';
+  postForm.reset();
+  postModal.show();
+});
+
+postForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const title = document.getElementById('postTitle').value;
+  const excerpt = document.getElementById('postExcerpt').value;
+  const date = document.getElementById('postDate').value;
+
+  if(editIndex === null){
+    posts.push({ id: Date.now(), title, excerpt, date });
+  } else {
+    posts[editIndex] = { ...posts[editIndex], title, excerpt, date };
+  }
+  postModal.hide();
+  renderPosts();
+});
+
+function renderPosts(){
+  postTableBody.innerHTML = '';
+  posts.forEach((post, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${post.id}</td>
+      <td>${post.title}</td>
+      <td>${post.excerpt}</td>
+      <td>${post.date}</td>
+      <td>
+        <button class="btn btn-sm btn-warning me-1 edit-btn">ویرایش</button>
+        <button class="btn btn-sm btn-danger delete-btn">حذف</button>
+      </td>
+    `;
+    row.querySelector('.edit-btn').addEventListener('click', () => {
+      editIndex = index;
+      document.getElementById('postModalLabel').innerText = 'ویرایش نوشته';
+      document.getElementById('postTitle').value = post.title;
+      document.getElementById('postExcerpt').value = post.excerpt;
+      document.getElementById('postDate').value = post.date;
+      postModal.show();
+    });
+    row.querySelector('.delete-btn').addEventListener('click', () => {
+      if(confirm('آیا مطمئن هستید می‌خواهید این نوشته حذف شود؟')){
+        posts.splice(index, 1);
+        renderPosts();
+      }
+    });
+    postTableBody.appendChild(row);
+  });
+}
+
+// نمونه اولیه
+posts.push({
+  id: Date.now(),
+  title: 'معرفی مجموعه پاییزه',
+  excerpt: 'نگاهی کوتاه به محصولات جدید پاییزه',
+  date: '2025-11-29'
+});
+renderPosts();
+</script>
+
+</body>
+</html>
