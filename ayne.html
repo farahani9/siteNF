@@ -202,178 +202,106 @@
   </div>
 </footer>
 
-    <!-- Bootstrap JS -->
-    <script>
-        // Elements
-        const aynehUploadBtn = document.getElementById('aynehUploadBtn');
-        const aynehFileInput = document.getElementById('aynehFileInput');
-        const aynehPreviewImg = document.getElementById('aynehPreviewImg');
-        const aynehPlaceholder = document.getElementById('aynehPlaceholder');
-        const aynehHaloRange = document.getElementById('aynehHaloRange');
-        const aynehWarmRange = document.getElementById('aynehWarmRange');
-        const aynehBlurRange = document.getElementById('aynehBlurRange');
-        const aynehHaloOrange = document.getElementById('aynehHaloOrange');
-        const aynehHaloBlue = document.getElementById('aynehHaloBlue');
-        const aynehMirrorSurface = document.getElementById('aynehMirrorSurface');
-        const aynehChips = document.querySelectorAll('.ayneh-chip');
-        const aynehDownloadBtn = document.getElementById('aynehDownloadBtn');
-        const aynehShareBtn = document.getElementById('aynehShareBtn');
-        const aynehStartBtn = document.getElementById('aynehStartBtn');
+<script>
+    // Elements
+    const aynehUploadBtn = document.getElementById('aynehUploadBtn');
+    const aynehFileInput = document.getElementById('aynehFileInput');
+    const aynehPreviewImg = document.getElementById('aynehPreviewImg');
+    const aynehPlaceholder = document.getElementById('aynehPlaceholder');
+    const aynehHaloRange = document.getElementById('aynehHaloRange');
+    const aynehWarmRange = document.getElementById('aynehWarmRange');
+    const aynehBlurRange = document.getElementById('aynehBlurRange');
+    const aynehHaloOrange = document.getElementById('aynehHaloOrange');
+    const aynehHaloBlue = document.getElementById('aynehHaloBlue');
+    const aynehMirrorSurface = document.getElementById('aynehMirrorSurface');
+    const aynehChips = document.querySelectorAll('.ayneh-chip');
+    const aynehDownloadBtn = document.getElementById('aynehDownloadBtn');
+    const aynehShareBtn = document.getElementById('aynehShareBtn');
+    const aynehStartBtn = document.getElementById('aynehStartBtn');
 
-        // Event Listeners
-        aynehUploadBtn.addEventListener('click', () => aynehFileInput.click());
-        aynehStartBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+    // 🔹 آدرس عکس نهایی محصول
+    const FINAL_PRODUCT_IMAGE = 'img/Aynelast.jpg';
 
-        aynehFileInput.addEventListener('change', e => {
-            const file = e.target.files && e.target.files[0];
-            if (!file) return;
-            
-            const url = URL.createObjectURL(file);
-            aynehPreviewImg.src = url;
-            aynehPreviewImg.style.display = 'block';
-            aynehPlaceholder.style.display = 'none';
+    // Event Listeners
+    aynehUploadBtn.addEventListener('click', () => {
+        aynehFileInput.value = '';
+        aynehFileInput.click();
+    });
+
+    aynehStartBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // انتخاب عکس
+    aynehFileInput.addEventListener('change', e => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+
+        // نمایش عکس انتخابی کاربر
+        const url = URL.createObjectURL(file);
+        aynehPreviewImg.src = url;
+        aynehPreviewImg.style.display = 'block';
+        aynehPlaceholder.style.display = 'none';
+
+        // تغییر متن دکمه
+        aynehUploadBtn.textContent = 'کمی صبر کنید...';
+        aynehUploadBtn.disabled = true;
+
+        // بعد از 5 ثانیه → نمایش عکس محصول
+        setTimeout(() => {
+            aynehPreviewImg.src = FINAL_PRODUCT_IMAGE;
+            aynehUploadBtn.textContent = 'انتخاب محصول';
+            aynehUploadBtn.disabled = false;
+        }, 5000);
+    });
+
+    // هاله
+    aynehHaloRange.addEventListener('input', () => {
+        const value = aynehHaloRange.value;
+        const opacity = (value / 100).toFixed(2);
+        aynehHaloOrange.style.opacity = opacity;
+        aynehHaloBlue.style.opacity = Math.max(0, opacity - 0.15);
+    });
+
+    aynehBlurRange.addEventListener('input', () => {
+        aynehMirrorSurface.style.setProperty('--ayneh-mirror-blur', aynehBlurRange.value + 'px');
+    });
+
+    // Chip Behavior
+    aynehChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            aynehChips.forEach(c => c.classList.remove('ayneh-chip-active'));
+            chip.classList.add('ayneh-chip-active');
+            aynehApplyPreset(chip.dataset.action);
         });
+    });
 
-        aynehHaloRange.addEventListener('input', () => {
-            const value = aynehHaloRange.value;
-            const opacity = (value / 100).toFixed(2);
-            aynehHaloOrange.style.opacity = opacity;
-            aynehHaloBlue.style.opacity = Math.max(0, opacity - 0.15);
-        });
-
-        aynehWarmRange.addEventListener('input', () => {
-            const value = parseInt(aynehWarmRange.value, 10);
-        });
-
-        aynehBlurRange.addEventListener('input', () => {
-            const value = aynehBlurRange.value;
-            aynehMirrorSurface.style.setProperty('--ayneh-mirror-blur', value + 'px');
-        });
-
-        // Chip Behavior
-        aynehChips.forEach(chip => {
-            chip.addEventListener('click', () => {
-                aynehChips.forEach(c => c.classList.remove('ayneh-chip-active'));
-                chip.classList.add('ayneh-chip-active');
-                const action = chip.dataset.action;
-                aynehApplyPreset(action);
-            });
-        });
-
-        function aynehApplyPreset(name) {
-            switch (name) {
-                case 'halo':
-                    aynehHaloRange.value = 70;
-                    aynehHaloRange.dispatchEvent(new Event('input'));
-                    aynehWarmRange.value = 0;
-                    aynehWarmRange.dispatchEvent(new Event('input'));
-                    aynehBlurRange.value = 0;
-                    aynehBlurRange.dispatchEvent(new Event('input'));
-                    break;
-                case 'ripple':
-                    aynehHaloRange.value = 40;
-                    aynehHaloRange.dispatchEvent(new Event('input'));
-                    aynehWarmRange.value = 6;
-                    aynehWarmRange.dispatchEvent(new Event('input'));
-                    aynehBlurRange.value = 2;
-                    aynehBlurRange.dispatchEvent(new Event('input'));
-                    
-                    if (aynehPreviewImg.style.display !== 'none') {
-                        aynehPreviewImg.style.transform = 'scale(1.02) translateY(-4px)';
-                        setTimeout(() => {
-                            aynehPreviewImg.style.transform = 'translateY(0)';
-                        }, 420);
-                    }
-                    break;
-                case 'soft':
-                    aynehHaloRange.value = 50;
-                    aynehHaloRange.dispatchEvent(new Event('input'));
-                    aynehWarmRange.value = 12;
-                    aynehWarmRange.dispatchEvent(new Event('input'));
-                    aynehBlurRange.value = 4;
-                    aynehBlurRange.dispatchEvent(new Event('input'));
-                    break;
-                case 'minimal':
-                    aynehHaloRange.value = 0;
-                    aynehHaloRange.dispatchEvent(new Event('input'));
-                    aynehWarmRange.value = 0;
-                    aynehWarmRange.dispatchEvent(new Event('input'));
-                    aynehBlurRange.value = 0;
-                    aynehBlurRange.dispatchEvent(new Event('input'));
-                    break;
-            }
+    function aynehApplyPreset(name) {
+        if (name === 'halo') {
+            aynehHaloRange.value = 70;
+            aynehBlurRange.value = 0;
         }
+        if (name === 'ripple') {
+            aynehHaloRange.value = 40;
+            aynehBlurRange.value = 2;
+        }
+        if (name === 'soft') {
+            aynehHaloRange.value = 50;
+            aynehBlurRange.value = 4;
+        }
+        if (name === 'minimal') {
+            aynehHaloRange.value = 0;
+            aynehBlurRange.value = 0;
+        }
+        aynehHaloRange.dispatchEvent(new Event('input'));
+        aynehBlurRange.dispatchEvent(new Event('input'));
+    }
 
-        // Download Function
-        aynehDownloadBtn.addEventListener('click', async () => {
-            if (aynehPreviewImg.style.display === 'none') {
-                alert('لطفاً ابتدا یک عکس بارگذاری کنید');
-                return;
-            }
-            
-            try {
-                const canvas = document.createElement('canvas');
-                const ctx = canvas.getContext('2d');
-                
-                canvas.width = aynehPreviewImg.naturalWidth || 800;
-                canvas.height = aynehPreviewImg.naturalHeight || 600;
-                
-                ctx.drawImage(aynehPreviewImg, 0, 0, canvas.width, canvas.height);
-                
-                const dataURL = canvas.toDataURL('image/png');
-                const a = document.createElement('a');
-                a.href = dataURL;
-                a.download = 'ayneh-mirror.png';
-                a.click();
-            } catch (error) {
-                console.error('Error downloading image:', error);
-                alert('خطا در دانلود تصویر');
-            }
-        });
+    // Initial
+    aynehUploadBtn.textContent = 'انتخاب محصول';
+    aynehApplyPreset('halo');
+</script>
 
-        // Share Function
-        aynehShareBtn.addEventListener('click', async () => {
-            if (aynehPreviewImg.style.display === 'none') {
-                alert('لطفاً ابتدا یک عکس بارگذاری کنید');
-                return;
-            }
-            
-            try {
-                if (navigator.share) {
-                    const canvas = document.createElement('canvas');
-                    const ctx = canvas.getContext('2d');
-                    
-                    canvas.width = aynehPreviewImg.naturalWidth || 800;
-                    canvas.height = aynehPreviewImg.naturalHeight || 600;
-                    
-                    ctx.drawImage(aynehPreviewImg, 0, 0, canvas.width, canvas.height);
-                    
-                    canvas.toBlob(async (blob) => {
-                        const file = new File([blob], 'ayneh-mirror.png', { type: 'image/png' });
-                        
-                        try {
-                            await navigator.share({
-                                files: [file],
-                                title: 'آینه',
-                                text: 'این عکس رو با آینه ساختم!'
-                            });
-                        } catch (shareError) {
-                            console.error('Error sharing:', shareError);
-                            alert('اشتراک‌گذاری انجام نشد');
-                        }
-                    });
-                } else {
-                    alert('مرورگر شما از قابلیت اشتراک‌گذاری پشتیبانی نمی‌کند. از دکمه دانلود استفاده کنید.');
-                }
-            } catch (error) {
-                console.error('Error sharing image:', error);
-                alert('خطا در اشتراک‌گذاری تصویر');
-            }
-        });
-
-        // Initial Preset
-        aynehApplyPreset('halo');
-    </script>
    <script src="CDN/js/bootstrap.bundle.min.js"></script>
 
 </body>
