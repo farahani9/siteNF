@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صفحه پیدا نشد -  سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="css/css2.css">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class="fashion404-body">
+
+<div class="fashion404-content">
+  <div class="fashion404-number">404</div>
+  <div class="fashion404-subtitle">صفحه‌ای که دنبال آن هستید پیدا نشد!</div>
+  <a href="index.html" class="fashion404-btn">بازگشت به صفحه اصلی</a>
+</div>
+
+<!-- المان‌های متحرک اطراف -->
+<div class="fashion404-element dress"></div>
+<div class="fashion404-element pants"></div>
+<div class="fashion404-element scarf"></div>
+<div class="fashion404-element dress"></div>
+<div class="fashion404-element pants"></div>
+<div class="fashion404-element scarf"></div>
+<script>
+  const body = document.querySelector('.fashion404-body');
+  const types = ['scarf','pants','dress'];
+  const totalElements = 6; // تعداد کل المان‌ها
+
+  for(let i=0; i<totalElements; i++){
+    const div = document.createElement('div');
+    div.classList.add('fashion404-element');
+    const type = types[Math.floor(Math.random() * types.length)];
+    div.classList.add(type);
+
+    // موقعیت اولیه تصادفی
+    div.style.left = Math.random() * 90 + 'vw';
+    div.style.top = Math.random() * 90 + 'vh';
+
+    // سرعت حرکت تصادفی
+    div.style.animationDuration = (8 + Math.random()*5) + 's'; // 8 تا 13 ثانیه
+    div.style.animationDelay = Math.random() * 5 + 's';         // تاخیر تصادفی
+
+
+    body.appendChild(div);
+  }
+</script>
+
+</body>
+</html>
