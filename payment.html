@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>پرداخت | سترا</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg" href="img/favicon.svg" />
+
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" class="img-fluid" style="height: 60px; width: auto"/>
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-lg-start">
+          <li class="nav-item"><a class="nav-link" href="main-page.html">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="eror404.html">اعتماد شما</a></li>
+        </ul>
+
+        <!-- سرچ -->
+        <form class="d-flex my-2 my-lg-0 me-4">
+          <div class="input-group search-box w-100 w-lg-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img" />
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید" />
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex mt-2 mt-lg-0">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="shop-prouduct.html" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- ===== Payment ===== -->
+<div class="container-fluid mt-5 pt-5 pb-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-11 col-md-8 col-lg-6">
+
+            <div class="peyment-container mx-auto">
+
+                <div class="peyment-header text-center">
+                    <div class="peyment-logo">سترا</div>
+                    <h5>پرداخت امن زرین پال</h5>
+                    <div class="peyment-secure">امنیت تضمین شده</div>
+                </div>
+
+                <div class="peyment-content">
+
+                    <div id="successAlert" class="peyment-alert success d-none">
+                        ✅ پرداخت با موفقیت انجام شد
+                    </div>
+
+                    <div id="errorAlert" class="peyment-alert error d-none"></div>
+
+                    <div class="peyment-section">
+                        <div class="peyment-amount">
+                            <span>مبلغ قابل پرداخت</span>
+                            <span class="peyment-amount-value">۵۸۸,۰۰۰ تومان</span>
+                        </div>
+                    </div>
+
+                    <div class="peyment-section">
+                        <label class="peyment-label">شماره کارت</label>
+                        <input id="cardNumber" class="peyment-input" placeholder="1234 5678 9012 3456">
+
+                        <div class="row g-3 mt-2">
+                            <div class="col-6">
+                                <input id="expiryDate" class="peyment-input" placeholder="MM/YY">
+                            </div>
+                            <div class="col-6">
+                                <input id="cvv2" class="peyment-input" placeholder="CVV2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="payBtn" type="button"
+                            class="peyment-button w-100 mt-3">
+                        پرداخت و تکمیل خرید
+                    </button>
+
+                </div>
+
+                <div class="peyment-footer text-center">
+                    تمامی اطلاعات به صورت رمزنگاری شده منتقل می‌شود
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="orderSuccessModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center rounded-4">
+      <div class="modal-body p-4">
+        <h4 class="text-success">✅ سفارش شما ثبت شد</h4>
+        <p class="mt-2">از خرید شما متشکریم 🌸</p>
+        <button class="btn btn-success mt-3" data-bs-dismiss="modal">
+          باشه
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+function toEnglishDigits(str) {
+  return str.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d))
+            .replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+}
+
+document.getElementById("payBtn").addEventListener("click", function () {
+
+  const cardNumber = toEnglishDigits(
+    document.getElementById("cardNumber").value
+  ).replace(/\s/g, "");
+
+  const expiryDate = toEnglishDigits(
+    document.getElementById("expiryDate").value
+  );
+
+  const cvv2 = toEnglishDigits(
+    document.getElementById("cvv2").value
+  );
+
+  const errorAlert = document.getElementById("errorAlert");
+  errorAlert.classList.add("d-none");
+
+  if (!/^\d{16}$/.test(cardNumber)) {
+    errorAlert.innerText = "❌ شماره کارت نامعتبر است";
+    errorAlert.classList.remove("d-none");
+    return;
+  }
+
+  if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
+    errorAlert.innerText = "❌ تاریخ انقضا نامعتبر است";
+    errorAlert.classList.remove("d-none");
+    return;
+  }
+
+  if (!/^\d{3,4}$/.test(cvv2)) {
+    errorAlert.innerText = "❌ CVV2 نامعتبر است";
+    errorAlert.classList.remove("d-none");
+    return;
+  }
+
+  // شبیه‌سازی نتیجه پرداخت (۷۰٪ موفق، ۳۰٪ ناموفق)
+  const isSuccess = Math.random() > 0.3;
+
+  if (isSuccess) {
+    const modalEl = document.getElementById("orderSuccessModal");
+    const modal = new bootstrap.Modal(modalEl);
+    modal.show();
+
+    setTimeout(() => {
+      modal.hide();
+      window.location.href = "main-page.html";
+    }, 2000);
+
+  } else {
+    // ❌ پرداخت ناموفق
+    window.location.href = "payment-failed.html";
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="FatemehArabkhorasani">
+  <title> فراموشی رمز - سترا </title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg">
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" class="img-fluid" style="height: 60px; width: auto"/>
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-lg-start">
+          <li class="nav-item"><a class="nav-link" href="main-page.html">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="eror404.html">اعتماد شما</a></li>
+        </ul>
+
+        <!-- سرچ -->
+        <form class="d-flex my-2 my-lg-0 me-4">
+          <div class="input-group search-box w-100 w-lg-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img" />
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید" />
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex mt-2 mt-lg-0">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="shop-prouduct.html" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================== محتوای اصلی ================== -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8 col-xl-7">
+      <div class="faramoshi-card d-flex flex-column flex-lg-row">
+
+        <!-- سمت چپ فرم -->
+        <div class="faramoshi-left col-12 col-lg-6 p-4 p-lg-5">
+          <!-- نشانگر مراحل -->
+          <div class="faramoshi-step-indicator d-flex justify-content-center mb-4">
+            <div class="faramoshi-step active">1</div>
+            <div class="faramoshi-step-line"></div>
+            <div class="faramoshi-step">2</div>
+            <div class="faramoshi-step-line"></div>
+            <div class="faramoshi-step">3</div>
+          </div>
+
+          <h1 class="faramoshi-brand-title">بازیابی رمز عبور</h1>
+          <p class="faramoshi-brand-sub">لطفاً ایمیل یا شماره موبایل خود را وارد کنید</p>
+
+          <form id="faramoshiForm" class="faramoshi-form" novalidate>
+            <label for="faramoshiIdentity" class="faramoshi-label">ایمیل یا شماره موبایل</label>
+            <input id="faramoshiIdentity" name="identity" class="faramoshi-input form-control mb-3" type="text" placeholder="example@gmail.com" required>
+            
+            <div id="faramoshiError" class="faramoshi-error" style="display:none"></div>
+            <div id="faramoshiSuccess" class="faramoshi-success" style="display:none"></div>
+
+            <button class="faramoshi-btn btn btn-gradient w-100" type="submit">ارسال لینک بازیابی</button>
+            <p class="faramoshi-small text-center mt-3">
+              <a class="faramoshi-link" href="login.html">بازگشت به صفحه ورود</a>
+            </p>
+          </form>
+
+          <div class="faramoshi-info-box mt-4">
+            <h6 class="mb-2" style="font-size: 14px;">راهنمای بازیابی رمز عبور:</h6>
+            <ul class="faramoshi-small mb-0 ps-3">
+              <li>لینک بازیابی رمز عبور به ایمیل یا شماره موبایل شما ارسال خواهد شد</li>
+              <li>لینک ارسالی به مدت ۱ ساعت معتبر است</li>
+              <li>در صورت عدم دریافت ایمیل، پوشه اسپم خود را بررسی کنید</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- سمت راست تزئینی -->
+        <div class="faramoshi-right col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center p-4 p-lg-5">
+          <div class="text-center text-white">
+            <div class="rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px; background: rgba(255,255,255,0.2);">
+              <i class="bi bi-key" style="font-size: 50px;"></i>
+            </div>
+            <h3 class="mb-2">رمز عبور خود را فراموش کرده‌اید؟</h3>
+            <p>ما به شما کمک می‌کنیم تا به سرعت حساب خود را بازیابی کنید</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<!-- Footer -->
+<footer class="footer text-dark position-relative">
+  <div class="footer-bg"></div>
+
+  <div class="container position-relative " style="padding-top: 50px;">
+    <div class="row gy-4 justify-content-between align-items-start">
+
+      <!-- بخش 1: چرا سترا و پاسخگو بودن -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="fw-bold mb-2">درباره سترا</h5>
+        <p class="small text-muted">فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.</p>
+        <p class="mb-2">در سترا پاسخگوی شما هستیم</p>
+        <p class="fw-bold mb-1 fs-5">۰۹۳۹۳۸۹۶۰۶۲</p>
+        <p class="fw-bold mb-3 fs-5">۰۲۱۶۶۲۸۱۳۳۲</p>
+        <a href="Contact.html" class="btn btn-light px-4 py-2 rounded-pill">تماس با ما</a>
+      </div>
+
+      <!-- بخش 2: آدرس و خدمات -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="fw-bold mb-2">آدرس</h5>
+        <p class="small text-muted mb-3">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
+
+        <h5 class="fw-bold mb-2">خدمات</h5>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
+          <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
+          <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
+        </ul>
+      </div>
+
+      <!-- بخش 3: اینماد، شبکه اجتماعی، قوانین -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <div class="mb-3">
+          <img src="img/enamad-one-star.png" alt="نماد اعتماد" class="img-fluid" style="height:80px;">
+        </div>
+
+        <div class="d-flex gap-3 mb-3 justify-content-center justify-content-md-start">
+          <a href="#"><img src="img/instagram.png" alt="اینستاگرام" style="width:30px;"></a>
+          <a href="#"><img src="img/whatsapp.png" alt="واتساپ" style="width:30px;"></a>
+          <a href="#"><img src="img/connection.png" alt="تلگرام" style="width:30px;"></a>
+        </div>
+
+        <div>
+          <a href="rule.html" class="small text-muted">قوانین و مقررات</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+    <div class="text-center small text-muted">© ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.</div>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

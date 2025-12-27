@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="FatemehArabkhorasani" />
+  <title>قوانین و مقررات - سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg" />
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" class="img-fluid" style="height: 60px; width: auto"/>
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-lg-start">
+          <li class="nav-item"><a class="nav-link" href="main-page.html">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="eror404.html">اعتماد شما</a></li>
+        </ul>
+
+        <!-- سرچ -->
+        <form class="d-flex my-2 my-lg-0 me-4">
+          <div class="input-group search-box w-100 w-lg-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img" />
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید" />
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex mt-2 mt-lg-0">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="shop-prouduct.html" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<!-- قوانین -->
+<div class="rules-container mt-3 pt-5">
+  <div class="rules-header">
+    <span class="rules-logo">سترا</span>
+    <h1 class="rules-title">قوانین و مقررات</h1>
+    <p class="rules-subtitle">با مطالعه و پذیرش قوانین و مقررات سترا، از خدمات ایمن و مطمئن بهره‌مند شوید.</p>
+  </div>
+
+  <div class="rules-content">
+    <!-- بخش کشویی -->
+    <div class="rules-sections">
+      <div class="rules-section active">
+        <div class="rules-section-header" onclick="toggleSection(0)">
+          <h3><i class="fas fa-user-check"></i> قوانین عمومی و عضویت</h3>
+          <i class="fas fa-chevron-down rules-section-toggle"></i>
+        </div>
+        <div class="rules-section-body">
+          <ul class="rules-list">
+            <li>استفاده برای افراد بالای ۱۸ سال مجاز است.</li>
+            <li>تکمیل اطلاعات صحیح الزامی است.</li>
+            <li>ایجاد بیش از یک حساب مجاز نیست.</li>
+            <li>مسئولیت امنیت حساب با کاربر است.</li>
+            <li>سترا حق تعلیق حساب را دارد.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <div class="rules-section-header" onclick="toggleSection(1)">
+          <h3><i class="fas fa-shopping-cart"></i> قوانین خرید و فروش</h3>
+          <i class="fas fa-chevron-down rules-section-toggle"></i>
+        </div>
+        <div class="rules-section-body">
+          <ul class="rules-list">
+            <li>قیمت‌ها بر اساس نرخ روز تعیین می‌شوند.</li>
+            <li>پرداخت فقط از طریق درگاه امن است.</li>
+            <li>تمامی کالاها اصل و با کیفیت هستند.</li>
+            <li>مرجوعی تا ۷ روز امکان‌پذیر است.</li>
+            <li>هزینه ارسال بر عهده مشتری است مگر رایگان اعلام شود.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <div class="rules-section-header" onclick="toggleSection(2)">
+          <h3><i class="fas fa-shield-alt"></i> حریم خصوصی و محرمانگی</h3>
+          <i class="fas fa-chevron-down rules-section-toggle"></i>
+        </div>
+        <div class="rules-section-body">
+          <ul class="rules-list">
+            <li>سترا متعهد به محرمانگی اطلاعات است.</li>
+            <li>استفاده از کوکی‌ها برای بهبود تجربه کاربری.</li>
+            <li>اطلاعات مالی رمزنگاری می‌شوند.</li>
+            <li>اشتراک اطلاعات جمعی با شرکای معتبر.</li>
+            <li>ارائه اطلاعات در صورت درخواست قانونی.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <div class="rules-section-header" onclick="toggleSection(3)">
+          <h3><i class="fas fa-balance-scale"></i> مسئولیت‌ها و محدودیت‌ها</h3>
+          <i class="fas fa-chevron-down rules-section-toggle"></i>
+        </div>
+        <div class="rules-section-body">
+          <ul class="rules-list">
+            <li>مسئولیت محتوای کاربران بر عهده خودشان است.</li>
+            <li>خرید و فروش غیرمجاز ممنوع است.</li>
+            <li>سوءاستفاده از سیستم پرداخت پیگرد قانونی دارد.</li>
+            <li>سترا در اختلالات فنی خارجی مسئول نیست.</li>
+            <li>سترا حق تغییر قوانین را دارد.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rules-section">
+        <div class="rules-section-header" onclick="toggleSection(4)">
+          <h3><i class="fas fa-gavel"></i> حل و فصل اختلافات</h3>
+          <i class="fas fa-chevron-down rules-section-toggle"></i>
+        </div>
+        <div class="rules-section-body">
+          <ul class="rules-list">
+            <li>ابتدا مذاکره سپس مراجعه قانونی.</li>
+            <li>مرجع رسیدگی: دادگاه‌های تهران.</li>
+            <li>هزینه‌های حقوقی بر عهده متخلف است.</li>
+            <li>گزارش تخلف از طریق پشتیبانی.</li>
+            <li>بار اثبات ادعا بر عهده مدعی است.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- نکات مهم -->
+    <div class="rules-important">
+      <h4><i class="fas fa-exclamation-triangle"></i> نکات مهم</h4>
+      <ul class="rules-list">
+        <li>قبل از خرید مشخصات کالا را مطالعه کنید.</li>
+        <li>از صحت اطلاعات بانکی اطمینان حاصل کنید.</li>
+        <li>در صورت مشکل با پشتیبانی تماس بگیرید.</li>
+        <li>رمز عبور را در اختیار دیگران قرار ندهید.</li>
+        <li>فعالیت غیرمجاز منجر به محرومیت دائمی می‌شود.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- تایید قوانین -->
+  <div class="rules-agreement">
+    <div class="rules-checkbox">
+      <input type="checkbox" id="agreeRules">
+      <label for="agreeRules">قوانین و مقررات سترا را می‌پذیرم.</label>
+    </div>
+    <button class="rules-button" id="confirmButton" disabled>
+      <i class="fas fa-check-circle"></i> تایید و ادامه
+    </button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-dark position-relative">
+  <div class="footer-bg"></div>
+
+  <div class="container position-relative " style="padding-top: 50px;">
+    <div class="row gy-4 justify-content-between align-items-start">
+
+      <!-- بخش 1: چرا سترا و پاسخگو بودن -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="fw-bold mb-2">درباره سترا</h5>
+        <p class="small text-muted">فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.</p>
+        <p class="mb-2">در سترا پاسخگوی شما هستیم</p>
+        <p class="fw-bold mb-1 fs-5">۰۹۳۹۳۸۹۶۰۶۲</p>
+        <p class="fw-bold mb-3 fs-5">۰۲۱۶۶۲۸۱۳۳۲</p>
+        <a href="Contact.html" class="btn btn-light px-4 py-2 rounded-pill">تماس با ما</a>
+      </div>
+
+      <!-- بخش 2: آدرس و خدمات -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="fw-bold mb-2">آدرس</h5>
+        <p class="small text-muted mb-3">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
+
+        <h5 class="fw-bold mb-2">خدمات</h5>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
+          <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
+          <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
+        </ul>
+      </div>
+
+      <!-- بخش 3: اینماد، شبکه اجتماعی، قوانین -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <div class="mb-3">
+          <img src="img/enamad-one-star.png" alt="نماد اعتماد" class="img-fluid" style="height:80px;">
+        </div>
+
+        <div class="d-flex gap-3 mb-3 justify-content-center justify-content-md-start">
+          <a href="#"><img src="img/instagram.png" alt="اینستاگرام" style="width:30px;"></a>
+          <a href="#"><img src="img/whatsapp.png" alt="واتساپ" style="width:30px;"></a>
+          <a href="#"><img src="img/connection.png" alt="تلگرام" style="width:30px;"></a>
+        </div>
+
+        <div>
+          <a href="rule.html" class="small text-muted">قوانین و مقررات</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+    <div class="text-center small text-muted">© ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.</div>
+  </div>
+</footer>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+  // باز و بسته کردن بخش‌ها
+  function toggleSection(index){
+    const sections = document.querySelectorAll('.rules-section');
+    const section = sections[index];
+    sections.forEach((sec,i)=>{ if(i!==index) sec.classList.remove('active'); });
+    section.classList.toggle('active');
+  }
+
+  // فعال کردن دکمه تایید
+  const agreeCheckbox = document.getElementById('agreeRules');
+  const confirmButton = document.getElementById('confirmButton');
+  agreeCheckbox.addEventListener('change',()=>{ confirmButton.disabled = !agreeCheckbox.checked; });
+
+  confirmButton.addEventListener('click',()=>{
+    if(!confirmButton.disabled){ alert('قوانین و مقررات با موفقیت پذیرفته شد.'); }
+  });
+</script>
+<script src="js/aos.js"></script>
+<script> AOS.init({duration:1000,once:true}); </script>
+</body>
+</html>

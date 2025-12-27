@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="FatemehArabkhorasani">
+  <title>محصولات تکی - سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top ">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" class="img-fluid" style="height: 60px; width: auto"/>
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-lg-start">
+          <li class="nav-item"><a class="nav-link" href="main-page.html">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="eror404.html">اعتماد شما</a></li>
+        </ul>
+
+        <!-- سرچ -->
+        <form class="d-flex my-2 my-lg-0 me-4">
+          <div class="input-group search-box w-100 w-lg-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img" />
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید" />
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex mt-2 mt-lg-0">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="shop-prouduct.html" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- ================= بخش بالا ================ -->
+<div class="container my-5" data-aos="fade"> <!-- container اضافه شد و فاصله بالا و پایین -->
+  <div class="row product-box g-4"> <!-- g-4 برای فاصله بین ستون‌ها -->
+    
+    <!-- ستون اول: عکس -->
+    <div class="col-md-4 product-image" >
+      <video class="img-fluid" autoplay loop muted playsinline>
+        <source src="img/clothing/product-cotdaman.mp4" type="video/mp4">
+        مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+      </video>
+    </div>
+
+    <!-- ستون وسط: مشخصات محصول -->
+    <div class="col-md-4">
+      <h3>ست ربکا</h3>
+      <p class="fw-bold mt-2" id="viewers-count" style="color: rgb(0, 0, 66);">
+        👀 هم‌اکنون 12 نفر در حال مشاهده این محصول هستند
+      </p>
+
+      <hr>
+
+      <h6>انتخاب رنگ:</h6>
+      <div>
+        <span class="color-circle" style="background:#5c030c;"></span>
+        <span class="color-circle" style="background:#745f3b;"></span>
+        <span class="color-circle" style="background:#3e4e23;"></span>
+      </div>
+
+      <hr>
+
+      <h6>انتخاب سایز:</h6>
+      <select class="form-select mt-2">
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select>
+
+      <hr>
+
+      <h6>تعداد:</h6>
+      <div class="d-flex align-items-center gap-2 mt-2">
+        <button class="btn" id="qty-minus" style="background-color: #F6E6DA;">−</button>
+        <span id="qty-number" class="px-3">1</span>
+        <button class="btn" id="qty-plus" style="background-color: #F6E6DA;">+</button>
+      </div>
+
+      <hr>
+
+      <button class="btn btn-add mt-3">افزودن به سبد خرید</button>
+    </div>
+
+    <!-- ستون سوم: ارسال دیدگاه -->
+    <div class="col-md-4"  data-aos="fade-up">
+      <div class="review-box">
+        <h5>ارسال دیدگاه</h5>
+        <input class="form-control mt-2" placeholder="نام شما">
+        <textarea class="form-control mt-3" rows="4" placeholder="دیدگاه شما"></textarea>
+        <button class="btn btn-dark w-100 mt-3">ارسال</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ================= تب توضیحات و نظرات ================= -->
+<div class="container mt-5">
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="desc-tab" data-bs-toggle="tab" data-bs-target="#desc" type="button">
+        توضیحات محصول
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review" type="button">
+        نظرات کاربران
+      </button>
+    </li>
+  </ul>
+
+  <div class="tab-content p-3 border border-top-0" id="myTabContent">
+
+    <!-- تب توضیحات -->
+    <div class="tab-pane fade show active" id="desc" role="tabpanel">
+
+  <p>
+    ست ربکا با پارچه نخی طبیعی و طراحی انحصاری تولید شده است.
+    این محصول ضد حساسیت و مناسب استفاده روزمره است.
+  </p>
+
+ <!-- لینک راهنمای اندازه در توضیحات -->
+<div class="mt-3">
+  <a href="#" class="size-text-link" data-bs-toggle="modal" data-bs-target="#sizeGuideModal">
+    <img src="img/ruler.png" class="ruler-icon" alt="رهنمای اندازه">
+    راهنمای سایز
+  </a>
+</div>
+
+
+</div>
+
+
+    <!-- تب نظرات -->
+    <div class="tab-pane fade" id="review" role="tabpanel">
+      <p>اولین نفری باشید که برای این محصول دیدگاه ثبت می‌کنید.</p>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="container my-4" style="padding-top: 20px; padding-bottom: 50px;"  data-aos="fade-down">
+  <h4 class="mb-3 fw-bold text-center text-md-start">
+    ست پیشنهادی
+  </h4>
+
+  <!-- بک گراند سبز کرم -->
+  <div class="slider-wrapper">
+
+    <!-- دسکتاپ و تبلت -->
+    <div id="popularSlider" class="carousel slide d-none d-md-block" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- اسلاید اول -->
+        <div class="carousel-item active">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <div class="product-card">
+                <img src="img/clothing/imgi_8_vest-pants-6-1.webp">
+                <h6>ست ربکا</h6>
+                <p class="price">۲,۰۰۰,۰۰۰ تومان</p>
+                <div class="product-actions">
+                  <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+                </div>
+                  <span class="big-heart">❤️</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-card">
+                <img src="img/clothing/photo_2025-10-28_15-20-32.jpg">
+                <h6>کیف جیر مینوسا</h6>
+                <p class="price">۶۲۰,۰۰۰ تومان</p>
+                <div class="product-actions">
+                  <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+                </div>
+                  <span class="big-heart">❤️</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-card">
+                <img src="img/clothing/vest-skirt-sets-fall-12.jpg">
+                <h6>ست کت و دامن زمستانی دانژه</h6>
+                <p class="price">۱,۴۹۹,۰۰۰ تومان</p>
+                <div class="product-actions">
+                  <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+                </div>
+                <span class="big-heart">❤️</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-card">
+                <img src="img/clothing/e26635049086d5c4bf2c9ad7eba1c892.jpg">
+                <h6>مینی اسکارف پاپیونی</h6>
+                <p class="price">۸۹,۰۰۰ تومان</p>
+                <div class="product-actions">
+                  <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+                </div>
+                <span class="big-heart">❤️</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- اسلاید دوم -->
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <div class="product-card">
+                <img src="img/clothing/Checkered-shirt-wool-1.jpg">
+                <h6>پیراهن پشمی چهارخونه پاییزی</h6>
+                <p class="price">۸۹۰,۰۰۰ تومان</p>
+                <div class="product-actions">
+                  <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+                </div>
+                <span class="big-heart">❤️</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-card">
+                <img src="img/clothing/IMG_20250810_120641_552.jpg">
+                <h6>شلوار زنانه مدل آدنیس</h6>
+                <p class="price">۴۹۹,۰۰۰ تومان</p>
+                <div class="product-actions">
+                  <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+                </div>
+                <span class="big-heart">❤️</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-card">
+                <img src="img/clothing/woomans-bout-8421-cream-2.jpg">
+                <h6>نیم بوت زنانه 8420 MR</h6>
+                <p class="price">۱,۴۵۰,۰۰۰ تومان</p>
+                <div class="product-actions">
+                  <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+                </div>
+                <span class="big-heart">❤️</span>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-card">
+                <img src="img/clothing/photo_2025-10-28_17-08-12.jpg">
+                <h6>کیف زارا شالدار</h6>
+                <p class="price">۴۵۰,۰۰۰ تومان</p>
+                <div class="product-actions">
+                  <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+                  <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+                </div>
+                <span class="big-heart">❤️</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#popularSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#popularSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- موبایل: اسکرول افقی -->
+    <div class="mobile-horizontal d-md-none hide-scrollbar">
+      <div class="product-card">
+        <img src="img/clothing/photo_2025-10-28_17-08-12.jpg">
+        <h6>کیف زارا شالدار</h6>
+        <p class="price">۴۵۰,۰۰۰ تومان</p>
+        <div class="product-actions">
+          <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+          <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+        </div>
+        <span class="big-heart">❤️</span>
+      </div>
+      
+
+      <div class="product-card">
+        <img src="img/clothing/imgi_8_vest-pants-6-1.webp">
+        <h6>ست ربکا</h6>
+        <p class="price">۲,۰۰۰,۰۰۰ تومان</p>
+        <div class="product-actions">
+          <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+          <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+        </div>
+        <span class="big-heart">❤️</span>
+      </div>
+
+      <div class="product-card">
+        <img src="img/clothing/photo_2025-10-28_15-20-32.jpg">
+        <h6>کیف جیر مینوسا</h6>
+        <p class="price">۶۲۰,۰۰۰ تومان</p>
+        <div class="product-actions">
+          <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+          <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+        </div>
+        <span class="big-heart">❤️</span>
+      </div>
+
+      <div class="product-card">
+        <img src="img/clothing/vest-skirt-sets-fall-12.jpg">
+        <h6>ست کت و دامن زمستانی دانژه</h6>
+        <p class="price">۱,۴۹۹,۰۰۰ تومان</p>
+        <div class="product-actions">
+          <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+          <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+        </div>
+        <span class="big-heart">❤️</span>
+      </div>
+
+      <div class="product-card">
+        <img src="img/clothing/e26635049086d5c4bf2c9ad7eba1c892.jpg">
+        <h6>مینی اسکارف پاپیونی</h6>
+        <p class="price">۸۹,۰۰۰ تومان</p>
+        <div class="product-actions">
+          <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+          <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+        </div>
+        <span class="big-heart">❤️</span>
+      </div>
+
+      <div class="product-card">
+        <img src="img/clothing/Checkered-shirt-wool-1.jpg">
+        <h6>پیراهن پشمی چهارخونه پاییزی</h6>
+        <p class="price">۸۹۰,۰۰۰ تومان</p>
+        <div class="product-actions">
+          <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+          <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+        </div>
+        <span class="big-heart">❤️</span>
+      </div>
+
+      <div class="product-card">
+        <img src="img/clothing/IMG_20250810_120641_552.jpg">
+        <h6>شلوار زنانه مدل آدنیس</h6>
+        <p class="price">۴۹۹,۰۰۰ تومان</p>
+        <div class="product-actions">
+          <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+          <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+        </div>
+        <span class="big-heart">❤️</span>
+      </div>
+
+      <div class="product-card">
+        <img src="img/clothing/woomans-bout-8421-cream-2.jpg">
+        <h6>نیم بوت زنانه 8420 MR</h6>
+        <p class="price">۱,۴۵۰,۰۰۰ تومان</p>
+        <div class="product-actions">
+          <button class="icon-btn like"><i class="bi bi-heart"></i></button>
+          <button class="icon-btn cart"><i class="bi bi-cart"></i></button>
+        </div>
+        <span class="big-heart">❤️</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal: Size Guide -->
+<div class="modal fade" id="sizeGuideModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">راهنمای اندازه</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <p class="mb-3">
+          لطفاً اندازه خود را با جدول زیر مقایسه کنید تا سایز مناسب را انتخاب کنید.
+        </p>
+
+        <table class="table table-bordered text-center">
+          <thead class="table-light">
+            <tr>
+              <th>سایز</th>
+              <th>دور سینه (cm)</th>
+              <th>دور کمر (cm)</th>
+              <th>دور باسن (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Small</td>
+              <td>84 - 88</td>
+              <td>64 - 68</td>
+              <td>88 - 92</td>
+            </tr>
+            <tr>
+              <td>Medium</td>
+              <td>88 - 92</td>
+              <td>68 - 72</td>
+              <td>92 - 96</td>
+            </tr>
+            <tr>
+              <td>Large</td>
+              <td>92 - 96</td>
+              <td>72 - 76</td>
+              <td>96 - 100</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-dark" data-bs-dismiss="modal">بستن</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-dark position-relative">
+  <div class="footer-bg"></div>
+
+  <div class="container position-relative " style="padding-top: 50px;">
+    <div class="row gy-4 justify-content-between align-items-start">
+
+      <!-- بخش 1: چرا سترا و پاسخگو بودن -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="fw-bold mb-2">درباره سترا</h5>
+        <p class="small text-muted">فروشگاه سترا مجموعه‌ای از لباس‌ها و اکسسوری‌های خاص را برای شما فراهم کرده است تا تجربه خریدی مطمئن و دلنشین داشته باشید.</p>
+        <p class="mb-2">در سترا پاسخگوی شما هستیم</p>
+        <p class="fw-bold mb-1 fs-5">۰۹۳۹۳۸۹۶۰۶۲</p>
+        <p class="fw-bold mb-3 fs-5">۰۲۱۶۶۲۸۱۳۳۲</p>
+        <a href="Contact.html" class="btn btn-light px-4 py-2 rounded-pill">تماس با ما</a>
+      </div>
+
+      <!-- بخش 2: آدرس و خدمات -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <h5 class="fw-bold mb-2">آدرس</h5>
+        <p class="small text-muted mb-3">تهران، خیابان ولیعصر، نبش کوچه مد، پلاک ۳۲</p>
+
+        <h5 class="fw-bold mb-2">خدمات</h5>
+        <ul class="list-unstyled small text-muted">
+          <li class="mb-2"><i class="bi bi-truck me-2"></i> ارسال سریع و مطمئن</li>
+          <li class="mb-2"><i class="bi bi-arrow-repeat me-2"></i> ضمانت بازگشت کالا</li>
+          <li class="mb-2"><i class="bi bi-headset me-2"></i> پشتیبانی ۲۴ ساعته</li>
+        </ul>
+      </div>
+
+      <!-- بخش 3: اینماد، شبکه اجتماعی، قوانین -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <div class="mb-3">
+          <img src="img/enamad-one-star.png" alt="نماد اعتماد" class="img-fluid" style="height:80px;">
+        </div>
+
+        <div class="d-flex gap-3 mb-3 justify-content-center justify-content-md-start">
+          <a href="#"><img src="img/instagram.png" alt="اینستاگرام" style="width:30px;"></a>
+          <a href="#"><img src="img/whatsapp.png" alt="واتساپ" style="width:30px;"></a>
+          <a href="#"><img src="img/connection.png" alt="تلگرام" style="width:30px;"></a>
+        </div>
+
+        <div>
+          <a href="rule.html" class="small text-muted">قوانین و مقررات</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+    <div class="text-center small text-muted">© ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.</div>
+  </div>
+</footer>
+<!-- Cart Confirmation Modal -->
+<div class="modal fade" id="cartConfirmModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4">
+      
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-bold"> محصول اضافه شد</h5>
+        <button type="button" class="btn-close ms-0" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+        <p class="mb-4">محصول با موفقیت به سبد خرید اضافه شد.</p>
+
+        <div class="d-flex justify-content-center gap-3">
+          <button class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">
+            ادامه خرید
+          </button>
+
+          <a href="shop-prouduct.html" class="btn btn-danger px-4">
+            تسویه حساب
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+document.querySelectorAll(".icon-btn.cart").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // جلوگیری از تداخل با اسلایدر
+
+    const modal = new bootstrap.Modal(
+      document.getElementById("cartConfirmModal")
+    );
+    modal.show();
+  });
+});
+</script>
+
+
+<script>
+  const qtyNum = document.getElementById("qty-number");
+  const plus = document.getElementById("qty-plus");
+  const minus = document.getElementById("qty-minus");
+
+  plus.onclick = () => qtyNum.textContent = Number(qtyNum.textContent) + 1;
+  
+  minus.onclick = () => {
+    if (Number(qtyNum.textContent) > 1) {
+      qtyNum.textContent = Number(qtyNum.textContent) - 1;
+    }
+  };
+</script>
+<script>
+  const viewers = document.getElementById("viewers-count");
+
+  setInterval(() => {
+    const randomNum = Math.floor(Math.random() * 15) + 5; // بین 5 تا 20
+    viewers.innerHTML = `👀 هم‌اکنون ${randomNum} نفر در حال مشاهده این محصول هستند`;
+  }, 5000);
+</script>
+<script>
+document.querySelectorAll(".icon-btn.like").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation(); // جلوگیری از ارسال event به Carousel
+
+    const card = e.currentTarget.closest(".product-card");
+    const heart = card.querySelector(".big-heart");
+
+    // قلب بزرگ انیمیشنی
+    heart.classList.add("active");
+    setTimeout(() => {
+      heart.classList.remove("active");
+    }, 500);
+
+    // تغییر رنگ قلب کوچک و toggle لایک
+    btn.classList.toggle("liked");
+  });
+});
+document.querySelectorAll(".btn-add").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const modal = new bootstrap.Modal(document.getElementById("cartConfirmModal"));
+    modal.show();
+  });
+});
+
+
+</script>
+
+
+<!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+</body>
+</html>

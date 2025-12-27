@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اطلاعات - سترا</title>
+  <link rel="icon" type="image/svg" href="img/favicon.svg" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/aos.css">
+
+</head>
+
+<body>
+
+  <!-- ================== Navbar ================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="img/logo2.svg" alt="لوگوی فروشگاه" class="img-fluid" style="height: 60px; width: auto"/>
+        <span class="text-black fw-bold">سترا</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/>
+        </svg>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- منو وسط -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center text-lg-start">
+          <li class="nav-item"><a class="nav-link" href="main-page.html">خانه</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">محصولات</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="prouduct.html">همه محصولات</a></li>
+              <li><a class="dropdown-item" href="#">لباس</a></li>
+              <li><a class="dropdown-item" href="#">شلوار</a></li>
+              <li><a class="dropdown-item" href="#">کیف</a></li>
+              <li><a class="dropdown-item" href="#">شال / روسری</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="aboutUs.html">درباره ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">تماس با ما</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog-grid.html">وبلاگ</a></li>
+          <li class="nav-item"><a class="nav-link" href="eror404.html">اعتماد شما</a></li>
+        </ul>
+
+        <!-- سرچ -->
+        <form class="d-flex my-2 my-lg-0 me-4">
+          <div class="input-group search-box w-100 w-lg-auto p-1">
+            <span class="input-group-text">
+              <img src="img/search-black.svg" alt="search" class="search-icon-img" />
+            </span>
+            <input type="text" class="form-control" placeholder="پوشاک مد نظر را سرچ کنید" />
+          </div>
+        </form>
+
+        <!-- دکمه‌های سمت راست -->
+        <div class="d-flex mt-2 mt-lg-0">
+          <a href="login.html" class="btn btn-icon me-2">
+            <img src="img/user-black.svg" alt="عضویت" class="icon-img">
+          </a>
+          <a href="#" class="btn-cart me-2">
+            <img src="img/trolley-black.svg" alt="سبد خرید" class="icon-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+<!-- صفحه  کاربران -->
+<div class="container-fluid mt-5">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <aside class="col-12 col-lg-3 mb-3 mb-lg-0">
+      <div class="sidebar-management p-3">
+        <h4 class="text-center mb-3 text-light">مدیریت فروشگاه</h4>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="admin-dashboard.html"><i class="bi bi-speedometer2"></i> داشبورد</a>
+          <a class="nav-link active" href="profile-dashboard.html"><i class="bi bi-person-circle"></i> پروفایل</a>
+          <a class="nav-link" href="admin-dashboard-prodouct.html"><i class="bi bi-box-seam"></i> محصولات</a>
+          <a class="nav-link" href="write.html"><i class="bi bi-pencil-square"></i> نوشته‌ها</a>
+          <a class="nav-link" href="users-dashboard.html"><i class="bi bi-people"></i> کاربران</a>
+          <a class="nav-link" href="#"><i class="bi bi-chat-dots"></i> تنظیمات</a>
+          <a class="nav-link" href="messages.html"><i class="bi bi-chat-dots"></i> پیام‌ها</a>
+          <a class="nav-link " href="ratings.html"><i class="bi bi-star"></i> امتیازها</a>
+          <a class="nav-link text-danger" href="#"><i class="bi bi-box-arrow-right"></i> خروج</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="col-12 col-lg-9 order-2">
+      <h2 class="mb-4">اطلاعات کاربران</h2>
+      <p class="text-muted">در این صفحه می‌توانید کاربران را مشاهده، ویرایش یا حذف کنید.</p>
+
+      <div class="table-wrapper">
+        <table class="table table-bordered table-striped">
+          <thead class="table-light">
+            <tr>
+              <th>عکس</th>
+              <th>شناسه</th>
+              <th>نام کامل</th>
+              <th>عملیات</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<footer class="footer-admin mt-4 text-center p-3 ">
+  © ۲۰۲۵ <strong>سترا</strong> | تمامی حقوق محفوظ است.
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script>
+const users = [
+  { id: 1, name: 'فاطمه عرب خراسانی' },
+  { id: 2, name: 'نرگش شیرین‌آبادی' },
+];
+
+const userTableBody = document.getElementById('userTableBody');
+
+function renderUsers() {
+  userTableBody.innerHTML = '';
+  users.forEach((user, index) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td><img src="img/user.png" width="45" class="rounded-circle"></td>
+      <td>${user.id}</td>
+      <td>${user.name}</td>
+      <td>
+        <button class="btn btn-sm btn-warning me-1 edit-btn">ویرایش</button>
+        <button class="btn btn-sm btn-danger delete-btn">حذف</button>
+      </td>
+    `;
+    row.querySelector('.edit-btn').addEventListener('click', () => {
+      const newName = prompt('نام جدید کاربر را وارد کنید:', user.name);
+      if(newName){
+        users[index].name = newName;
+        renderUsers();
+      }
+    });
+    row.querySelector('.delete-btn').addEventListener('click', () => {
+      if(confirm('آیا مطمئن هستید؟')){
+        users.splice(index, 1);
+        renderUsers();
+      }
+    });
+    userTableBody.appendChild(row);
+  });
+}
+
+renderUsers();
+</script>
+
+</body>
+</html>
