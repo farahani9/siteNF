@@ -199,6 +199,43 @@
       }
     });
   </script>
+  <script>
+  const togglePwd = document.getElementById('togglePwd');
+  const password = document.getElementById('password');
+  const eyeIcon = document.getElementById('eyeIcon');
+
+  togglePwd.addEventListener('click', () => {
+    if (password.type === "password") {
+      password.type = "text";
+      eyeIcon.classList.replace('bi-eye', 'bi-eye-slash');
+    } else {
+      password.type = "password";
+      eyeIcon.classList.replace('bi-eye-slash', 'bi-eye');
+    }
+  });
+
+  // اطلاعات ورود ادمین
+  const ADMIN_ID = "09123456789";   // شماره یا ایمیل ادمین
+  const ADMIN_PASS = "123456";      // رمز عبور ادمین
+
+  const loginForm = document.getElementById('loginForm');
+  const errorBox = document.getElementById('formError');
+
+  loginForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const identity = document.getElementById('identity').value.trim();
+    const pass = password.value.trim();
+
+    if (identity === ADMIN_ID && pass === ADMIN_PASS) {
+      window.location.href = "admin-dashboard.html";
+    } else {
+      errorBox.style.display = "block";
+      errorBox.innerText = "شماره موبایل یا رمز عبور اشتباه است";
+    }
+  });
+</script>
+
 
   <!-- Bootstrap JS -->
   <script src="js/bootstrap.bundle.min.js"></script>
