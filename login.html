@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="FatemehNarges">
-  <title> فرم - سترا</title>
+  <meta name="author" content="FatemehArabkhorasani">
+  <title>صفحه ورود - سترا</title>
   <link rel="icon" type="image/svg" href="img/favicon.svg">
 
   <!-- Bootstrap -->
@@ -72,107 +73,59 @@
     </div>
   </nav>
 
+  <!-- ================== Login Form ================== -->
+  <div class="login-container">
+    <div class="login-card login-box row g-0" role="main" aria-labelledby="loginTitle">
 
-  <!--    فرم ها      -->
- <main class="page">
-  <section class="custom-widget">
-    <!-- بالا: بنر -->
-    <header class="custom-widget__banner">
-      <svg class="custom-widget__banner-shape" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="bannerGrad" x1="0" x2="1">
-            <stop offset="0" stop-color="#F6D6D9"/>
-            <stop offset="1" stop-color="#E8D8C3"/>
-          </linearGradient>
-        </defs>
-        <path d="M0,140 C200,40 1000,240 1200,80 L1200,0 L0,0 Z" fill="url(#bannerGrad)"/>
-      </svg>
-      <div class="custom-widget__banner-text">
-        <div class="custom-widget__brand">سترا</div>
-        <div class="custom-widget__subtitle">دوست دارید استایل خودتان چگونه باشد</div>
+      <div class="login-left col-12 col-lg-6">
+        <h1 id="loginTitle" class="login-brand-title">ورود به حساب کاربری سترا</h1>
+        <p class="login-brand-sub">خوش آمدید — با ایمیل یا شماره موبایل وارد شوید</p>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <!-- ایمیل یا موبایل -->
+          <label for="identity" class="login-label">ایمیل یا شماره موبایل</label>
+          <input id="identity" name="identity" class="login-input" type="text" placeholder="example@domain.com یا 0912xxxxxxx" required aria-required="true">
+
+          <!-- رمز عبور -->
+          <label for="password" class="login-label">رمز عبور</label>
+          <div style="position:relative">
+            <input id="password" name="password" class="login-input" type="password" placeholder="رمز عبور" required aria-required="true" style="padding-right:44px">
+            <button type="button" id="togglePwd" aria-label="نمایش/مخفی کردن رمز"
+              style="position:absolute;right:8px;top:50%;transform:translateY(-50%);
+                     background:none;border:0;cursor:pointer;font-size:18px;color:var(--login-muted)">
+              <i class="bi bi-eye" id="eyeIcon"></i>
+            </button>
+          </div>
+
+          <!-- گزینه‌ها -->
+          <div class="login-row">
+            <label class="login-checkbox"><input type="checkbox" id="remember"> مرا به خاطر بسپار</label>
+            <a class="login-link login-small" href="forget.html">رمز عبور را فراموش کرده‌اید؟</a>
+          </div>
+
+          <!-- خطا -->
+          <div id="formError" class="login-error" role="alert" aria-live="assertive" style="display:none"></div>
+
+          <!-- دکمه ورود -->
+          <button class="login-btn" type="submit">ورود به حساب</button>
+
+          <p class="login-small" style="margin-top:12px">حساب ندارید؟ <a class="login-link" href="#">ثبت‌نام کنید</a></p>
+        </form>
       </div>
-    </header>
 
-    <!-- کارت اول: نام، سن، رنگ ها -->
-    <section class="custom-widget__card custom-widget__card--top">
-      <div class="custom-widget__grid">
-        <div class="custom-widget__col-6">
-          <label class="custom-widget__label">نام</label>
-          <div class="custom-widget__input-wrap">
-            <input class="custom-widget__input" id="firstName" type="text" placeholder="نام"/>
+      <!-- سمت راست تزئینی -->
+      <div class="login-right col-12 col-lg-6" aria-hidden="true">
+        <div style="text-align: center;">
+          <div style="width: 200px; height: 200px; background: linear-gradient(135deg, #ff8a65, #ff5f6d); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <i class="bi bi-person-check" style="font-size: 80px; color: white;"></i>
           </div>
-        </div>
-        <div class="custom-widget__col-6">
-          <label class="custom-widget__label">نام خانوادگی</label>
-          <div class="custom-widget__input-wrap">
-            <input class="custom-widget__input" id="lastName" type="text" placeholder="نام خانوادگی"/>
-          </div>
-        </div>
-        <div class="custom-widget__col-12">
-          <label class="custom-widget__label">سن</label>
-          <div class="custom-widget__input-wrap">
-            <input class="custom-widget__input" id="age" type="number" min="1" max="120" placeholder="سن خود را وارد کنید"/>
-          </div>
-        </div>
-        <div class="custom-widget__col-12">
-          <label class="custom-widget__label">رنگ مورد علاقه</label>
-          <div class="custom-widget__swatches">
-            <button type="button" class="custom-widget__swatch custom-widget__swatch--gray" data-value="gray" title="Gray"></button>
-            <button type="button" class="custom-widget__swatch custom-widget__swatch--olive" data-value="olive" title="Olive"></button>
-            <button type="button" class="custom-widget__swatch custom-widget__swatch--pink" data-value="pink" title="Pink"></button>
-            <button type="button" class="custom-widget__swatch custom-widget__swatch--beige" data-value="beige" title="Beige"></button>
-          </div>
+          <h3 style="color: #2B2B2B; margin-bottom: 10px;">سترا</h3>
+          <p style="color: #7A6A66;">تجربه خریدی متفاوت و خاص</p>
         </div>
       </div>
-    </section>
 
-    <!-- کارت دوم: فصل، تناژ پوستی، استایل ها، پیشنهاد، ارسال -->
-    <section class="custom-widget__card custom-widget__card--bottom">
-      <div class="custom-widget__grid">
-        <div class="custom-widget__col-12">
-          <label class="custom-widget__label">لباس فصل مورد علاقه</label>
-          <div class="custom-widget__seasons">
-            <button type="button" class="custom-widget__season" data-season="fall">پاییز<br><span class="custom-widget__icon">🍁</span></button>
-            <button type="button" class="custom-widget__season" data-season="winter">زمستان<br><span class="custom-widget__icon">❄️</span></button>
-            <button type="button" class="custom-widget__season" data-season="spring">بهار<br><span class="custom-widget__icon">🌸</span></button>
-            <button type="button" class="custom-widget__season" data-season="summer">تابستان<br><span class="custom-widget__icon">☀️</span></button>
-          </div>
-        </div>
-
-        <div class="custom-widget__col-12">
-          <label class="custom-widget__label">تناژ پوستی شما</label>
-          <div class="custom-widget__tones">
-            <button type="button" class="custom-widget__tone custom-widget__tone--light" data-tone="light"><span></span></button>
-            <button type="button" class="custom-widget__tone custom-widget__tone--medium" data-tone="medium"><span></span></button>
-            <button type="button" class="custom-widget__tone custom-widget__tone--dark" data-tone="dark"><span></span></button>
-          </div>
-        </div>
-
-        <div class="custom-widget__col-12">
-          <label class="custom-widget__label">استایل مورد علاقه</label>
-          <div class="custom-widget__styles">
-            <button type="button" class="custom-widget__style-chip" data-style="retro">رترو</button>
-            <button type="button" class="custom-widget__style-chip" data-style="classic">کلاسیک</button>
-            <button type="button" class="custom-widget__style-chip" data-style="tomboy">تامبوی</button>
-            <button type="button" class="custom-widget__style-chip" data-style="casual">کژوال</button>
-            <button type="button" class="custom-widget__style-chip" data-style="vintage">وینتیج</button>
-          </div>
-        </div>
-
-        <div class="custom-widget__col-12">
-          <label class="custom-widget__label">پیشنهاد شما</label>
-          <div class="custom-widget__input-wrap">
-            <textarea class="custom-widget__textarea" id="suggestion" placeholder="لطفاً پیشنهاد خود را بنویسید"></textarea>
-          </div>
-        </div>
-
-        <div class="custom-widget__col-12 custom-widget__actions">
-          <button type="button" id="submitBtn" class="custom-widget__submit">ارسال کنید</button>
-        </div>
-      </div>
-    </section>
-  </section>
-</main>
+    </div>
+  </div>
 
 <!-- Footer -->
 <footer class="footer text-dark position-relative">
@@ -228,70 +181,28 @@
   </div>
 </footer>
 
-<script>
-const qs = s => document.querySelector(s);
-const qsa = s => Array.from(document.querySelectorAll(s));
+  <!-- ================== Scripts ================== -->
+  <script>
+    const togglePwd = document.getElementById('togglePwd');
+    const password = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
 
-/* single-select swatches */
-qsa('.swatch').forEach(el=>{
-  el.addEventListener('click', ()=> {
-    qsa('.swatch').forEach(x=>x.classList.remove('selected'));
-    el.classList.add('selected');
-  });
-});
+    togglePwd.addEventListener('click', () => {
+      if (password.type === "password") {
+        password.type = "text";
+        eyeIcon.classList.remove('bi-eye');
+        eyeIcon.classList.add('bi-eye-slash');
+      } else {
+        password.type = "password";
+        eyeIcon.classList.remove('bi-eye-slash');
+        eyeIcon.classList.add('bi-eye');
+      }
+    });
+  </script>
 
-/* faces single-select */
-qsa('.face').forEach(el=>{
-  el.addEventListener('click', ()=> {
-    qsa('.face').forEach(x=>x.classList.remove('selected'));
-    el.classList.add('selected');
-  });
-});
-
-/* seasons single-select */
-qsa('.season').forEach(el=>{
-  el.addEventListener('click', ()=> {
-    qsa('.season').forEach(x=>x.classList.remove('selected'));
-    el.classList.add('selected');
-  });
-});
-
-/* tones single-select */
-qsa('.tone').forEach(el=>{
-  el.addEventListener('click', ()=> {
-    qsa('.tone').forEach(x=>x.classList.remove('selected'));
-    el.classList.add('selected');
-  });
-});
-
-/* styles multi-select */
-qsa('.style-chip').forEach(el=>{
-  el.addEventListener('click', ()=> {
-    el.classList.toggle('active');
-  });
-});
-
-/* submit */
-qs('#submitBtn').addEventListener('click', ()=>{
-  const data = {
-    firstName: qs('#firstName').value.trim(),
-    lastName: qs('#lastName').value.trim(),
-    age: qs('#age').value.trim(),
-    color: qsa('.swatch.selected')[0]?.dataset.value || null,
-    face: qsa('.face.selected')[0]?.dataset.face || null,
-    season: qsa('.season.selected')[0]?.dataset.season || null,
-    tone: qsa('.tone.selected')[0]?.dataset.tone || null,
-    styles: qsa('.style-chip.active').map(e=>e.dataset.style),
-    suggestion: qs('#suggestion')?.value.trim() || ''
-  };
-  console.log('setra form data:', data);
-  alert('مرسی! پاسخ شما ثبت شد. (برای توسعه: ارسال به سرور اضافه شود)');
-});
-</script>
-
-
-    <!-- Bootstrap JS -->
-   <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/aos.js"></script>
 
 </body>
 </html>
